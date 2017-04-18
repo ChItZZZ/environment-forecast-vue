@@ -26,7 +26,7 @@
               <div class="panel-heading">导航窗口</div>
               <div class="panel-body" style="min-height: 200px;">
                 <div class="nav-item"
-                                     ng-repeat="tab in categories" ui-sref="app.kpicategory({categoryId:tab.id})">
+                                     v-repeat="tab in categories" ui-sref="app.kpicategory({categoryId:tab.id})">
                   <p class="nav-item-title">
                     <a  style="color: white">{{tab.name}}</a>
                   </p>
@@ -48,7 +48,7 @@
 
           <div class="pull-right title-desc">&nbsp;&nbsp;</div>
           <div class="pull-right title-desc" style="width:300px;overflow:hidden;" ioc-marquee>
-            <span ng-repeat="news in newsList">
+            <span v-repeat="news in newsList">
               <a href="{{news.url}}" target="_blank">{{ news.title }}</a>
               &nbsp;&nbsp;&nbsp;&nbsp;
             </span>
@@ -62,7 +62,7 @@
       <div>
         <div class="row">
           <div class="col-md-12">
-            <div class="panel panel-primary ioc-panel" ng-repeat="class in kpiClasses">
+            <div class="panel panel-primary ioc-panel" v-repeat="class in kpiClasses">
               <div class="panel panel-primary ioc-panel" style="border:none;"
                                 >
                 <div class="panel-heading">
@@ -88,7 +88,7 @@
                   </thead>
                   <tbody>
 
-                    <tr ng-repeat="kpi in class.data | orderBy:'sortOrder'" ng-click="changeKPI(class,kpi)" class="hover-tr">
+                    <tr v-repeat="kpi in class.data | orderBy:'sortOrder'" ng-click="changeKPI(class,kpi)" class="hover-tr">
                       <td class="tr-kpiname">{{kpi.name}}</td>
                       <td class="tr-kpistatus">
                         <label class="label {{kpi.data.status | kpiStatusClass}} status">{{ kpi.data.status | kpiStatusText}}</label>

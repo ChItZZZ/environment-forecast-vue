@@ -174,7 +174,7 @@
 												<span class="num">{{ selectedRange }}.00%</span>
 											</div>
 											<div class="progress-bar progress-bar-slider">
-												<input class="progress-slider" type="range" min="-100" max="100" ng-model="selectedRange">
+												<input class="progress-slider" type="range" min="-100" max="100" v-model="selectedRange">
 												<div class="inner" ng-style="{ width: (selectedRange/2 +50) + '%' || '50%' }" ></div>
 											</div>
 										</div>
@@ -191,7 +191,7 @@
 												<span class="num">{{ selectedRange2 }}%</span>
 											</div>
 											<div class="progress-bar progress-bar-slider">
-												<input class="progress-slider" type="range" min="-100" max="100" ng-model="selectedRange2"  disabled="true">
+												<input class="progress-slider" type="range" min="-100" max="100" v-model="selectedRange2"  disabled="true">
 												<div class="inner" ng-style="{ width: (selectedRange2/2 +50) + '%' || '50%' }"></div>
 											</div>
 										</div>
@@ -208,7 +208,7 @@
 												<span class="num">{{ selectedRange3 }}%</span>
 											</div>
 											<div class="progress-bar progress-bar-slider">
-												<input class="progress-slider" type="range" min="0" max="100" ng-model="selectedRange3" disabled="true">
+												<input class="progress-slider" type="range" min="0" max="100" v-model="selectedRange3" disabled="true">
 												<div class="inner" ng-style="{ width: (selectedRange3/2 +50) + '%' || '50%' }"></div>
 											</div>
 										</div>

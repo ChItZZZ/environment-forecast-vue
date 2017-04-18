@@ -14,7 +14,7 @@
 <div class="details-content">
   <div class="container">
     <tabset>
-      <tab ng-repeat="tab in tabMap" active="tab.active" heading="{{tab.label}}" id="{{tab.id}}" ng-click="tabChangeFunction('{{tab.name}}')" name="{{tab.name}}">
+      <tab v-repeat="tab in tabMap" active="tab.active" heading="{{tab.label}}" id="{{tab.id}}" ng-click="tabChangeFunction('{{tab.name}}')" name="{{tab.name}}">
       </tab>
     </tabset>
     <div class="row col-md-12" style="margin-top: 20px;">
@@ -37,7 +37,7 @@
                 </p>
                 <h>{{ALLDATA.tableName}}</h>
                 <table class="table" style="font-size:16px">
-                  <tr ng-repeat="tableData in ALLDATA.tableData">
+                  <tr v-repeat="tableData in ALLDATA.tableData">
                     <td>{{tableData.name}}</td>
                     <td align="right">{{tableData.value}}</td>
                   </tr>
@@ -49,7 +49,7 @@
                   </p>
                   <h>{{ALLDATA.detailTableName}}</h>
                   <table class="table" style="font-size:16px;background-color:skyblue">
-                    <tr ng-repeat="tableData in ALLDATA.detailTableData">
+                    <tr v-repeat="tableData in ALLDATA.detailTableData">
                       <td>{{tableData.name}}</td>
                       <td align="right">{{tableData.value}}</td>
                     </tr>
@@ -80,7 +80,7 @@
               </p>
               <h>{{ALLDATA.townTableName}}</h>
               <table class="table" style="font-size:16px">
-                <tr ng-repeat="tableData in ALLDATA.townTableData">
+                <tr v-repeat="tableData in ALLDATA.townTableData">
                   <td>{{tableData.name}}</td>
                   <td align="right">{{tableData.value}}</td>
                 </tr>

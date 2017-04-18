@@ -29,21 +29,21 @@
 									<table class="table table-hover">
 										<caption><h4>{{displayYear}} 年 {{driverTrainLastMonth}} 月驾校培训情况</h4></caption>
 	    								<tr>
-	    									<td ng-repeat="driverTrainMsg in driverTrainMsgLastMonthList">
+	    									<td v-repeat="driverTrainMsg in driverTrainMsgLastMonthList">
 	    										<font size="3">{{driverTrainMsg.name}}</font>
 	    									</td>
 	    								</tr>
 	    								<tr>
-	    									<td ng-repeat="driverTrainMsg in driverTrainMsgLastMonthList">
+	    									<td v-repeat="driverTrainMsg in driverTrainMsgLastMonthList">
 	    										<font size="3">{{driverTrainMsg.number}}</font>
 	    									</td>
 	    								</tr>
 									</table>
 									<div><br><br></div>
 									<h4>驾校培训信息类别选择</h4>
-									<div class="radio" ng-repeat="driverTrainOne in driverTrainList">
+									<div class="radio" v-repeat="driverTrainOne in driverTrainList">
 										<label>
-											<input type="radio" ng-model="driverTrainKindSelected" ng-value="driverTrainOne.name" name="driverTrainList" ng-click="driverTrainKindChange(driverTrainOne)">
+											<input type="radio" v-model="driverTrainKindSelected" ng-value="driverTrainOne.name" name="driverTrainList" ng-click="driverTrainKindChange(driverTrainOne)">
 								            <font size="3">{{driverTrainOne.name}}</font>
 								        </label>
 									</div>

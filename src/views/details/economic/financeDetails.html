@@ -40,7 +40,7 @@
 												<th class="t-right">比年初增加</th>
 											</tr>
 										</thead>
-										<tr ng-repeat="d in tables.rTable">
+										<tr v-repeat="d in tables.rTable">
 											<td>{{d.key}}</td>
 											<td>{{d.remain | number:1}}亿元</td>
 											<td>
@@ -75,7 +75,7 @@
 												<th class="t-right">比年初增加</th>
 											</tr>
 										</thead>
-										<tr ng-repeat="d in tables.fTable">
+										<tr v-repeat="d in tables.fTable">
 											<td>{{d.key}}</td>
 											<td>{{d.remain | number:1}}亿元</td>
 											<td>

@@ -75,21 +75,21 @@
 									</div>
 									<div class="panel-body">
 									     <label class="">
-										  <input type="radio"  value="0" checked ng-model="lineChartData.selected" ng-change ='trendInfoChanged()'>
+										  <input type="radio"  value="0" checked v-model="lineChartData.selected" ng-change ='trendInfoChanged()'>
 												  查看事故发生数
 												</label>
 									     <label class="">
-										  <input type="radio"  value="1"  ng-model="lineChartData.selected" ng-change ='trendInfoChanged()'>
+										  <input type="radio"  value="1"  v-model="lineChartData.selected" ng-change ='trendInfoChanged()'>
 												  查看受伤人数
 												</label>
 		
 												<label class="">
-												  <input type="radio" value="2" ng-model="lineChartData.selected" ng-change ='trendInfoChanged()'>
+												  <input type="radio" value="2" v-model="lineChartData.selected" ng-change ='trendInfoChanged()'>
 												  查看死亡人数
 												</label>
 
 								            <label class="">
-										  <input type="radio"  value="3" ng-model="lineChartData.selected" ng-change='trendInfoChanged()' >
+										  <input type="radio"  value="3" v-model="lineChartData.selected" ng-change='trendInfoChanged()' >
 												  查看直接财产损失
 												</label>
 												<hr>

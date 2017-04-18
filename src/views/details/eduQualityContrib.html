@@ -28,15 +28,15 @@
 								<div class="col-md-5">
 									<table class="table table-hover">
 										<caption><h4>{{lastYear}} 年学业质量情况</h4></caption>
-	    								<tr ng-repeat="studyQuality in studyQualityLastYearList">
+	    								<tr v-repeat="studyQuality in studyQualityLastYearList">
 	    									<td style="width:65%"><font size="3">{{studyQuality.name}}</font></td>
 	    									<td style="width:35%" class="t-right"><font size="3">{{studyQuality.number}}%</font></td>
 	    								</tr>
 									</table>
 									<h4>学业质量类别选择</h4>
-									<div class="radio" ng-repeat="studyQualityOne in studyQuality">
+									<div class="radio" v-repeat="studyQualityOne in studyQuality">
 										<label>
-											<input type="radio" ng-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" ng-click="studyQualityKindChange(studyQualityOne)">
+											<input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" ng-click="studyQualityKindChange(studyQualityOne)">
 								            <font size="3">{{studyQualityOne.name}}</font>
 								        </label>
 									</div>
@@ -64,15 +64,15 @@
 								<div class="col-md-5">
 									<table class="table table-hover">
 										<caption><h4>{{lastYear}} 年学校质量情况</h4></caption>
-	    								<tr ng-repeat="schoolQuality in schoolQualityLastYearList">
+	    								<tr v-repeat="schoolQuality in schoolQualityLastYearList">
 	    									<td style="width:65%"><font size="3">{{schoolQuality.name}}</font></td>
 	    									<td style="width:35%" class="t-right"><font size="3">{{schoolQuality.number}}%</font></td>
 	    								</tr>
 									</table>
 									<h4>学校质量类别选择</h4>
-									<div class="radio" ng-repeat="schoolQualityOne in schoolQuality">
+									<div class="radio" v-repeat="schoolQualityOne in schoolQuality">
 										<label>
-											<input type="radio" ng-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" ng-click="schoolQualityKindChange(schoolQualityOne)">
+											<input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" ng-click="schoolQualityKindChange(schoolQualityOne)">
 								            <font size="3">{{schoolQualityOne.name}}</font>
 								        </label>
 									</div>
@@ -100,15 +100,15 @@
 								<div class="col-md-5">
 									<table class="table table-hover">
 										<caption><h4>{{lastYear}} 年学校教学成果</h4></caption>
-	    								<tr ng-repeat="enroll in enrollLastYearList">
+	    								<tr v-repeat="enroll in enrollLastYearList">
 	    									<td style="width:65%"><font size="3">{{enroll.name}}</font></td>
 	    									<td style="width:35%" class="t-right"><font size="3">{{enroll.number}}%</font></td>
 	    								</tr>
 									</table>
 									<h4>教学成果类别选择</h4>
-									<div class="radio" ng-repeat="enrollOne in enroll">
+									<div class="radio" v-repeat="enrollOne in enroll">
 										<label>
-											<input type="radio" ng-model="eduEnrollKindSelected" ng-value="enrollOne.name" name="enrollLastYearList" ng-click="enrollKindChange(enrollOne)">
+											<input type="radio" v-model="eduEnrollKindSelected" ng-value="enrollOne.name" name="enrollLastYearList" ng-click="enrollKindChange(enrollOne)">
 								            <font size="3">{{enrollOne.name}}</font>
 								        </label>
 									</div>
@@ -158,9 +158,9 @@
 	    								</tr>
 									</table>
 									<h4>教育贡献类别选择</h4>
-									<div class="radio" ng-repeat="contribOne in contrib">
+									<div class="radio" v-repeat="contribOne in contrib">
 										<label>
-											<input type="radio" ng-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" ng-click="contribKindChange(contribOne)">
+											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" ng-click="contribKindChange(contribOne)">
 								            <font size="3">{{contribOne.name}}</font>
 								        </label>
 									</div>

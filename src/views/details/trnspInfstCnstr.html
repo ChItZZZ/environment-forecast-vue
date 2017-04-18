@@ -33,7 +33,7 @@
 									</table>
 									<div style="overflow: auto; overflow-x:hidden;height: 300px">
 										<table class="table table-hover">
-		    								<tr ng-repeat="underConstructionProject in projectsUnderConstructionList">
+		    								<tr v-repeat="underConstructionProject in projectsUnderConstructionList">
 		    									<td style="width:50%"><h5 style="margin-top: 27px;">{{underConstructionProject.prjctName}}</h5></td>
 		    									<td style="width:30%">
 		    										<div class="progress" style="margin-top: 24px;">
@@ -89,7 +89,7 @@
 									</table>
 									<div style="overflow: auto; overflow-x:hidden;height: 300px">
 										<table class="table table-hover">
-											<tr ng-repeat="project in completedProjectList">
+											<tr v-repeat="project in completedProjectList">
 												<td style="width:32%"><font size="3">{{project.prjctName}}</font></td>
 												<td class="t-right" style="width:13%"><font size="3">{{project.startTime}}</font></td>
 												<td class="t-right" style="width:14%"><font size="3">{{project.cntrctPrice}}万元</font></td>

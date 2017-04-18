@@ -70,7 +70,7 @@
                                 </div>
                                 <div style="overflow: auto; overflow-x:hidden;height: 340px" ng-show="mapTableStatus.airQuality">
                                     <table class="table table-hover table-responsive" style="font-size:14px">
-                                        <tr ng-repeat="airQualityOne in airQualityMarkerList">
+                                        <tr v-repeat="airQualityOne in airQualityMarkerList">
                                             <td style="width:30%">{{airQualityOne.monitor}}</td>
                                             <td style="width:14%"><span>{{airQualityOne.index_aqi}}</span></td>
                                             <td style="width:14%"><span>{{airQualityOne.index_pm25}}</span></td>
@@ -98,7 +98,7 @@
                                 </div>
                                 <div style="overflow: scroll;overflow-x:hidden;height:340px" ng-show="mapTableStatus.airCondition">
                                     <table class="table table-hover table-responsive" style="font-size:14px">
-                                        <tr ng-repeat="airConditionOne in airConditionMarkerList">
+                                        <tr v-repeat="airConditionOne in airConditionMarkerList">
                                             <td style="width:20%">{{airConditionOne.monitor}}</td>
                                             <td style="width:20%"><span>{{airConditionOne.index_temperature}}</span></td>
                                             <td style="width:30%"><span>{{airConditionOne.index_humidity}}</span></td>
@@ -123,7 +123,7 @@
                                 </div>
                                 <div style="overflow: auto; overflow-x:hidden;height: 320px" ng-show="mapTableStatus.wasteAir">
                                     <table class="table table-hover table-responsive" style="font-size:14px">
-                                        <tr ng-repeat="wasteAirOne in wasteAirMarkerList">
+                                        <tr v-repeat="wasteAirOne in wasteAirMarkerList">
                                             <td style="width:20%">{{wasteAirOne.monitor.slice(0,6)}}</td>
                                             <td style="width:20%"><span>{{(wasteAirOne.index_discharge[1]/100000000).toFixed(2)}}亿</span></td>
                                             <td style="width:20%"><span>{{wasteAirOne.index_smoke.toFixed(2)}}</span></td>
@@ -223,8 +223,8 @@
                                     <div class="col-md-3">
                                         <h4>空气质量监测点选择</h4>
                                         <div style="font-size:14px;">
-                                            <div class="radio" ng-repeat="airQualityOne in airQualityCurrentList"><label>
-                                                <input type="radio" ng-model="airQualityCurrentListSelected" ng-value="airQualityOne.monitor" name="airQualityCurrentListRadio" ng-click="airQualityCurrentChange(airQualityOne)">{{airQualityOne.monitor}}
+                                            <div class="radio" v-repeat="airQualityOne in airQualityCurrentList"><label>
+                                                <input type="radio" v-model="airQualityCurrentListSelected" ng-value="airQualityOne.monitor" name="airQualityCurrentListRadio" ng-click="airQualityCurrentChange(airQualityOne)">{{airQualityOne.monitor}}
                                             </label></div>
                                         </div>
                                         <hr>
@@ -290,8 +290,8 @@
                                     <div class="col-md-3">
                                         <h4>废气排放指标选择</h4>
                                         <div style="font-size:14px;">
-                                            <div class="radio" ng-repeat="wasteAirOne in wasteAirCurrentList"><label>
-                                                <input type="radio" ng-model="wasteAirCurrentListSelected" ng-value="wasteAirOne" name="wasteAirCurrentListRadio" ng-click="wasteAirCurrentChange(wasteAirOne)">{{wasteAirOne}}
+                                            <div class="radio" v-repeat="wasteAirOne in wasteAirCurrentList"><label>
+                                                <input type="radio" v-model="wasteAirCurrentListSelected" ng-value="wasteAirOne" name="wasteAirCurrentListRadio" ng-click="wasteAirCurrentChange(wasteAirOne)">{{wasteAirOne}}
                                             </label></div>
                                         </div>
                                         <hr>
@@ -348,8 +348,8 @@
                                     <div class="col-md-3">
                                         <h4>气象指标选择</h4>
                                         <div style="font-size:14px;">
-                                            <div class="radio" ng-repeat="airConditionOne in airConditionCurrentList"><label>
-                                                <input type="radio" ng-model="airConditionCurrentListSelected" ng-value="airConditionOne" name="airConditionCurrentListRadio" ng-click="airConditionCurrentChange(airConditionOne)">{{airConditionOne}}
+                                            <div class="radio" v-repeat="airConditionOne in airConditionCurrentList"><label>
+                                                <input type="radio" v-model="airConditionCurrentListSelected" ng-value="airConditionOne" name="airConditionCurrentListRadio" ng-click="airConditionCurrentChange(airConditionOne)">{{airConditionOne}}
                                             </label></div>
                                         </div>
                                         <hr>

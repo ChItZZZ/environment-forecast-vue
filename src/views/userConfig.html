@@ -49,7 +49,7 @@
 							<div class="ioc-panel-table">
 								<table class="table table-bordered" id="datatableuser">
 									<tbody>
-										<tr ng-repeat="user in userArr">
+										<tr v-repeat="user in userArr">
 											<td style="width:100px">
 												<h5>{{user.account}}</h5>
 											</td>
@@ -113,7 +113,7 @@
 										
 									</thead>
 									<tbody>
-										<tr ng-repeat="department in departmentArr">
+										<tr v-repeat="department in departmentArr">
 											<td style="width:180px">
 												<h5>{{department.name}}</h5>
 											</td>
@@ -153,13 +153,13 @@
 						<div class="form-group col-md-6">
 						    <div class="col-sm-4">用户名:*</div>
 						    <div class="col-sm-8">
-								<input name="accountName" ng-model="userAddTemp.account" class="form-control input-sm" ng-valid="userIsExistStatus" required>
+								<input name="accountName" v-model="userAddTemp.account" class="form-control input-sm" ng-valid="userIsExistStatus" required>
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">角色:*</div>
 							<div class="col-sm-8">
-								<select class="form-control" name="accountRole" ng-model="userAddTemp.role" required>
+								<select class="form-control" name="accountRole" v-model="userAddTemp.role" required>
 								  <option>管理员</option>
 								  <option>市长、市委书记</option>
 								  <option>分管局长</option>
@@ -174,31 +174,31 @@
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">姓名:</div>
 							<div class="col-sm-8">
-								<input ng-model="userAddTemp.name" class="form-control input-sm">
+								<input v-model="userAddTemp.name" class="form-control input-sm">
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">头衔:</div>
 							<div class="col-sm-8">
-								<input ng-model="userAddTemp.title" class="form-control input-sm">
+								<input v-model="userAddTemp.title" class="form-control input-sm">
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">昵称:</div>
 							<div class="col-sm-8">
-								<input ng-model="userAddTemp.systemName" class="form-control input-sm">
+								<input v-model="userAddTemp.systemName" class="form-control input-sm">
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">手机:</div>
 							<div class="col-sm-8">
-								<input ng-model="userAddTemp.mobilePhone" class="form-control input-sm" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/^\d]/g,'')">
+								<input v-model="userAddTemp.mobilePhone" class="form-control input-sm" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/^\d]/g,'')">
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">工作电话:</div>
 							<div class="col-sm-8">
-								<input ng-model="userAddTemp.workPhone" class="form-control input-sm" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/^\d]/g,'')">
+								<input v-model="userAddTemp.workPhone" class="form-control input-sm" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/^\d]/g,'')">
 							</div>
 						</div>
 					</form>
@@ -302,13 +302,13 @@
 						<div class="form-group col-md-6">
 						    <div class="col-sm-4">用户名:*</div>
 						    <div class="col-sm-8">
-								<input name="accountName" ng-model="userModifyTemp.account" class="form-control input-sm" ng-valid="userIsExistStatus" disabled="disabled" required>
+								<input name="accountName" v-model="userModifyTemp.account" class="form-control input-sm" ng-valid="userIsExistStatus" disabled="disabled" required>
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">角色:*</div>
 							<div class="col-sm-8">
-								  <select class="form-control" name="accountRole" ng-model="userModifyTemp.role" disabled="disabled" required>
+								  <select class="form-control" name="accountRole" v-model="userModifyTemp.role" disabled="disabled" required>
 								  <option>管理员</option>
 								  <option>市长、市委书记</option>
 								  <option>分管局长</option>
@@ -327,31 +327,31 @@
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">姓名:</div>
 							<div class="col-sm-8">
-								<input ng-model="userModifyTemp.name" class="form-control input-sm">
+								<input v-model="userModifyTemp.name" class="form-control input-sm">
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">头衔:</div>
 							<div class="col-sm-8">
-								<input ng-model="userModifyTemp.title" class="form-control input-sm">
+								<input v-model="userModifyTemp.title" class="form-control input-sm">
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">昵称:</div>
 							<div class="col-sm-8">
-								<input ng-model="userModifyTemp.systemName" class="form-control input-sm">
+								<input v-model="userModifyTemp.systemName" class="form-control input-sm">
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">手机:</div>
 							<div class="col-sm-8">
-								<input ng-model="userModifyTemp.mobilePhone" class="form-control input-sm" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/^\d]/g,'')" \>
+								<input v-model="userModifyTemp.mobilePhone" class="form-control input-sm" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/^\d]/g,'')" \>
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">工作电话:</div>
 							<div class="col-sm-8">
-								<input ng-model="userModifyTemp.workPhone" class="form-control input-sm" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/^\d]/g,'')" \>
+								<input v-model="userModifyTemp.workPhone" class="form-control input-sm" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/^\d]/g,'')" \>
 							</div>
 						</div>
 						</div>
@@ -438,10 +438,10 @@
 							<div  style="overflow: auto; overflow-x:hidden;height:300px">
 							<table class="table table-bordered">
 								<tbody>
-									<tr ng-repeat="userDepartment in userDepartmentArr">
+									<tr v-repeat="userDepartment in userDepartmentArr">
 										<td style="text-align:center;width:200px"><h4>{{userDepartment.name}}</h4></td>									
 										<td style="text-align:center;">
-											<input type="checkbox" name="favoriteColors" ng-model="userDepartment.isSelected" style="zoom: 150%">															
+											<input type="checkbox" name="favoriteColors" v-model="userDepartment.isSelected" style="zoom: 150%">
 										</td>																				
 									</tr>
 								</tbody>
@@ -485,13 +485,13 @@
 						<div class="form-group col-md-6">
 						    <div class="col-sm-4">用户名:*</div>
 						    <div class="col-sm-8">
-								<input name="accountName" ng-model="departmentAddTemp.name" class="form-control input-sm" required>
+								<input name="accountName" v-model="departmentAddTemp.name" class="form-control input-sm" required>
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">描述:*</div>
 							<div class="col-sm-8">
-								<input name="accountName" ng-model="departmentAddTemp.description" class="form-control input-sm" required>
+								<input name="accountName" v-model="departmentAddTemp.description" class="form-control input-sm" required>
 							</div>
 						</div>
 					</form>
@@ -547,13 +547,13 @@
 						<div class="form-group col-md-6">
 						    <div class="col-sm-4">用户名:*</div>
 						    <div class="col-sm-8">
-								<input name="accountName" ng-model="departmentModifyTemp.name" class="form-control input-sm" required>
+								<input name="accountName" v-model="departmentModifyTemp.name" class="form-control input-sm" required>
 							</div>
 						</div>
 						<div class="form-group col-md-6">
 							<div class="col-sm-4">描述:*</div>
 							<div class="col-sm-8">
-								<input name="accountName" ng-model="departmentModifyTemp.description" class="form-control input-sm">
+								<input name="accountName" v-model="departmentModifyTemp.description" class="form-control input-sm">
 							</div>
 						</div>
 					</form>
@@ -629,7 +629,7 @@
 						<div class="form-group col-md-6">
 						    <div class="col-sm-4">新密码:*</div>
 						    <div class="col-sm-8">
-								<input name="accountName" ng-model="newIdInfo.password" class="form-control input-sm" required>
+								<input name="accountName" v-model="newIdInfo.password" class="form-control input-sm" required>
 							</div>
 						</div>
 					</form>

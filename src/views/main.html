@@ -19,7 +19,7 @@
 </div>
 <div ioc-scroll-nav></div>
 <div class="container home-container" style="min-height:1500px;">
-    <div class="row" ng-repeat="domain in domainMap" id="{{ domain.id }}-section">
+    <div class="row" v-repeat="domain in domainMap" id="{{ domain.id }}-section">
         <div class="col-md-12">
             <div class="title">
                 <a>
@@ -31,7 +31,7 @@
             -->
             <div class="pull-right title-desc">&nbsp;&nbsp;</div>
             <div class="pull-right title-desc" style="width:300px;overflow:hidden;" ioc-marquee>
-                <span ng-repeat="news in domain.selectedCategory.news">
+                <span v-repeat="news in domain.selectedCategory.news">
                     <a href="{{news.url}}" target="_blank">{{ news.title }}</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
@@ -47,7 +47,7 @@
                     <div class="panel panel-primary">
                         <div style="min-height:610px;">
                             <div class="" style="padding: 15px; padding-left: 5px;" ioc-btn-group>
-                                <button ioc-btn class="btn btn-xs {{category.status | categoryStatus}}" style="margin-right:5px;" ng-repeat="category in domain.data | orderBy:'sortOrder'" ng-click="selectCategory(domain, category)" >{{category.name}}</button>
+                                <button ioc-btn class="btn btn-xs {{category.status | categoryStatus}}" style="margin-right:5px;" v-repeat="category in domain.data | orderBy:'sortOrder'" ng-click="selectCategory(domain, category)" >{{category.name}}</button>
                             </div>
                             <table class="table table-bordered kpi-table">
                                 <thead class="ioc-thead">
@@ -63,7 +63,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="kpi in domain.selectedCategory.page_data | orderBy:'sortOrder'">
+                                    <tr v-repeat="kpi in domain.selectedCategory.page_data | orderBy:'sortOrder'">
                                         <td class="tr-kpiname">{{kpi.name}}</td>
                                         <td class="tr-kpistatus">
                                             <label class="label {{kpi.data.status | kpiStatusClass}} status">{{ kpi.data.status | kpiStatusText}}</label>
@@ -88,7 +88,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <pagination class="pull-right" direction-links="true" total-items="domain.selectedCategory.total" ng-model="domain.selectedCategory.curr_page" ng-change="pageChanged(domain.selectedCategory)" items-per-page="10" previous-text="上一页" next-text="下一页"></pagination>
+                    <pagination class="pull-right" direction-links="true" total-items="domain.selectedCategory.total" v-model="domain.selectedCategory.curr_page" ng-change="pageChanged(domain.selectedCategory)" items-per-page="10" previous-text="上一页" next-text="下一页"></pagination>
                 </div>
             </div>
         </div>

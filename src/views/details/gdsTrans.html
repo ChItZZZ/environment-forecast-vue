@@ -28,7 +28,7 @@
 								<div class="col-md-4">
 									<table class="table table-hover">
 										<caption><h4>{{displayYear}} 年 {{TrckLastMonth}} 月货车存量分布情况</h4></caption>
-	    								<tr ng-repeat="gdsTrckNum in gdsTrckNumLastMonthList">
+	    								<tr v-repeat="gdsTrckNum in gdsTrckNumLastMonthList">
 	    									<td><font size="3">{{gdsTrckNum.name}}</font></td>
 	    									<td class="t-right"><font size="3">{{gdsTrckNum.number}}辆</font></td>
 	    								</tr>
@@ -42,9 +42,9 @@
 								</div>
 								<div class="col-md-4">
 									<h4>货车类别选择</h4>
-									<div class="radio" ng-repeat="gdsTrckNumOne in gdsTrckNumList">
+									<div class="radio" v-repeat="gdsTrckNumOne in gdsTrckNumList">
 										<label>
-											<input type="radio" ng-model="gdsTrckKindSelected" ng-value="gdsTrckNumOne.name" name="gdsTrckNumList" ng-click="gdsTrckKindChange(gdsTrckNumOne)">
+											<input type="radio" v-model="gdsTrckKindSelected" ng-value="gdsTrckNumOne.name" name="gdsTrckNumList" ng-click="gdsTrckKindChange(gdsTrckNumOne)">
 								            <font size="3">{{gdsTrckNumOne.name}}</font>
 								        </label>
 									</div>
@@ -69,16 +69,16 @@
 								<div class="col-md-4">
 									<table class="table table-hover">
 										<caption><h4>{{displayYear}} 年 {{TrckLastMonth}} 月货车吨位数分布情况</h4></caption>
-	    								<tr ng-repeat="gdsTrckTng in gdsTrckTngLastMonthList">
+	    								<tr v-repeat="gdsTrckTng in gdsTrckTngLastMonthList">
 	    									<td><font size="3">{{gdsTrckTng.name}}</font></td>
 	    									<td class="t-right"><font size="3">{{gdsTrckTng.number}}吨</font></td>
 	    								</tr>
 									</table>
 									<div><br><br></div>
 									<h4>货车吨位数类别选择</h4>
-									<div class="radio" ng-repeat="gdsTrckTngOne in gdsTrckTngList">
+									<div class="radio" v-repeat="gdsTrckTngOne in gdsTrckTngList">
 										<label>
-											<input type="radio" ng-model="gdsTrckTngKindSelected" ng-value="gdsTrckTngOne.name" name="gdsTrckTngList" ng-click="gdsTrckTngKindChange(gdsTrckTngOne)">
+											<input type="radio" v-model="gdsTrckTngKindSelected" ng-value="gdsTrckTngOne.name" name="gdsTrckTngList" ng-click="gdsTrckTngKindChange(gdsTrckTngOne)">
 								            <font size="3">{{gdsTrckTngOne.name}}</font>
 								        </label>
 									</div>

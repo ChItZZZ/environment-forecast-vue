@@ -28,15 +28,15 @@
 								<div class="col-md-4">
 									<table class="table table-hover">
 										<caption><h4>{{displayYear}} 年{{userListLastYearTitle}}</h4></caption>
-	    								<tr ng-repeat="userOne in userListLastYearSelected">
+	    								<tr v-repeat="userOne in userListLastYearSelected">
 	    									<td><font size="3">{{userOne.name}}</font></td>
 	    									<td class="t-right"><font size="3">{{userOne.number}}人</font></td>
 	    								</tr>
 									</table>
 									<h4>用户类别选择</h4>
-									<div class="radio" ng-repeat="user in userList">
+									<div class="radio" v-repeat="user in userList">
 										<label>
-											<input type="radio" ng-model="userKindSelected" ng-value="user.name" name="userList" ng-click="userKindChange(user)">
+											<input type="radio" v-model="userKindSelected" ng-value="user.name" name="userList" ng-click="userKindChange(user)">
 								            <font size="3">{{user.name}}</font>
 								        </label>
 									</div>
@@ -67,15 +67,15 @@
 								<div class="col-md-4">
 									<table class="table table-hover">
 										<caption><h4>{{displayYear}} 年{{infrstrctTotalLastYearTitle}}</h4></caption>
-	    								<tr ng-repeat="infrstrct in infrstrctListLastYearSelected">
+	    								<tr v-repeat="infrstrct in infrstrctListLastYearSelected">
 	    									<td><font size="3">{{infrstrct.name}}</font></td>
 	    									<td class="t-right"><font size="3">{{infrstrct.number}}{{infrstrctTotalLastYearUnion}}</font></td>
 	    								</tr>
 									</table>
 									<h4>基础设施选择</h4>
-									<div class="radio" ng-repeat="infrstrct in infrstrctTotalList">
+									<div class="radio" v-repeat="infrstrct in infrstrctTotalList">
 										<label>
-											<input type="radio" ng-model="infrstrctKindSelected" ng-value="infrstrct.name" name="infrstrctTotalList" ng-click="infrstrctKindChange(infrstrct)">
+											<input type="radio" v-model="infrstrctKindSelected" ng-value="infrstrct.name" name="infrstrctTotalList" ng-click="infrstrctKindChange(infrstrct)">
 								            <font size="3">{{infrstrct.name}}</font>
 								        </label>
 									</div>

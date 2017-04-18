@@ -75,8 +75,8 @@
 												<highchart style="width:700px;height:700px" config="citymanager_jiandu_lianshu_option"></highchart>
 											</div>
 											<div class="col-md-3">
-												<div class="radio" ng-repeat="jianduzhibiaoone in jianduzhibiaolist"><label>
-													<input type="radio" ng-model="jianduzhibiao" ng-value="jianduzhibiaoone" name="jianduzhibiao" ng-click="jianduzhibiaoClick(jianduzhibiaoone)">{{jianduzhibiaoone}}
+												<div class="radio" v-repeat="jianduzhibiaoone in jianduzhibiaolist"><label>
+													<input type="radio" v-model="jianduzhibiao" ng-value="jianduzhibiaoone" name="jianduzhibiao" ng-click="jianduzhibiaoClick(jianduzhibiaoone)">{{jianduzhibiaoone}}
 												</label></div>
 												<p class="fill-margin"></p>
 											</div>
@@ -87,8 +87,8 @@
 												<highchart style="width:700px;height:400px" config="citymanager_jiandu_benyue_option"></highchart>
 											</div>
 											<div class="col-md-3">
-												<div class="radio" ng-repeat="jianduzhibiaoone in jianduzhibiao_benyuelist"><label>
-													<input type="radio" ng-model="jianduzhibiao_benyue" ng-value="jianduzhibiaoone" name="jianduzhibiao_benyue" ng-click="jianduzhibiao_benyueClick(jianduzhibiaoone)">{{jianduzhibiaoone}}
+												<div class="radio" v-repeat="jianduzhibiaoone in jianduzhibiao_benyuelist"><label>
+													<input type="radio" v-model="jianduzhibiao_benyue" ng-value="jianduzhibiaoone" name="jianduzhibiao_benyue" ng-click="jianduzhibiao_benyueClick(jianduzhibiaoone)">{{jianduzhibiaoone}}
 												</label></div>
 												<p class="fill-margin"></p>
 											</div>
@@ -109,8 +109,8 @@
 										    										 
 										    	<ul class="nav nav-pills col-md-4" style="margin-top:3mm;">
 										    	
-										    		<select name="monitor" class="form-control"  ng-model="xuanzedanwei" ng-change="danweiClick(xuanzedanwei)">
-													<option ng-repeat="danwei in danweis">{{danwei.danweiname}}</option>
+										    		<select name="monitor" class="form-control"  v-model="xuanzedanwei" ng-change="danweiClick(xuanzedanwei)">
+													<option v-repeat="danwei in danweis">{{danwei.danweiname}}</option>
 					                       			 </select>
 										    	<!-- 
 												    <li class="dropdown all-camera-dropdown">
@@ -121,7 +121,7 @@
 												       		
 												    		<ul class="dropdown-menu">
 												    		 <div  style="overflow: auto; overflow-x:hidden;height:350px">
-												          		<li ng-repeat="danwei in danweis"><a href="" ng-click = "danweiClick(danwei.danweiname)">{{danwei.danweiname}}</a></li>		      
+												          		<li v-repeat="danwei in danweis"><a href="" ng-click = "danweiClick(danwei.danweiname)">{{danwei.danweiname}}</a></li>
 															</div>
 															</ul>
 														
@@ -165,8 +165,8 @@
 										    <div class="col-md-12" align="left">	
 										    	<div class="nav nav-pills col-md-3" style="margin-top:3mm;">请选择想要查看的部门:</div>										 
 										    	<ul class="nav nav-pills col-md-4" style="margin-top:3mm;">
-												   <select name="monitor" class="form-control"  ng-model="xuanzedanwei_shijian" ng-change="danwei_shijianClick(xuanzedanwei_shijian)">
-													<option ng-repeat="danwei in danweis">{{danwei.danweiname}}</option>
+												   <select name="monitor" class="form-control"  v-model="xuanzedanwei_shijian" ng-change="danwei_shijianClick(xuanzedanwei_shijian)">
+													<option v-repeat="danwei in danweis">{{danwei.danweiname}}</option>
 					                       			 </select>
 												</ul>
 										    </div>
@@ -184,8 +184,8 @@
 												
 											</div>
 											<div class="col-md-3">
-												<div class="radio" ng-repeat="jianduzhibiaoone in jianduzhibiao_shijianlist"><label>
-													<input type="radio" ng-model="jianduzhibiao_shijian" ng-value="jianduzhibiaoone" name="jianduzhibiao_shijian" ng-click="jianduzhibiao_shijianClick(jianduzhibiaoone)">{{jianduzhibiaoone}}
+												<div class="radio" v-repeat="jianduzhibiaoone in jianduzhibiao_shijianlist"><label>
+													<input type="radio" v-model="jianduzhibiao_shijian" ng-value="jianduzhibiaoone" name="jianduzhibiao_shijian" ng-click="jianduzhibiao_shijianClick(jianduzhibiaoone)">{{jianduzhibiaoone}}
 												</label></div>
 												<p class="fill-margin"></p>
 											</div>

@@ -68,7 +68,7 @@
 								</div>
 								<div style="overflow: auto;overflow-x:hidden;height: 240px" ng-show="mapTableStatus.waterQuality">
 									<table class="table table-hover table-responsive" style="font-size:14px">
-										<tr ng-repeat="waterQualityOne in waterQualityMarkerList">
+										<tr v-repeat="waterQualityOne in waterQualityMarkerList">
 											<td style="width:20%">{{waterQualityOne.monitor}}</td>
 											<td style="width:20%"><span>{{waterQualityOne.index_o2.toFixed(2)}}</span></td>
 											<td style="width:15%"><span>{{waterQualityOne.index_kmno4.toFixed(2)}}</span></td>
@@ -92,7 +92,7 @@
 								</div>
 								<div style="overflow: auto;overflow-x:hidden;height: 240px" ng-show="mapTableStatus.waterCondition">
 									<table class="table table-hover table-responsive"  style="font-size:14px">
-										<tr ng-repeat="waterConditionOne in waterConditionMarkerList">
+										<tr v-repeat="waterConditionOne in waterConditionMarkerList">
 											<td style="width:30%">{{waterConditionOne.monitor}}</td>
 											<td style="width:35%">{{waterConditionOne.index_levelUp.toFixed(2)}}</td>
 											<td style="width:35%">{{waterConditionOne.index_levelDown.toFixed(2)}}</td>
@@ -115,7 +115,7 @@
 								</div>
 								<div style="overflow: auto; overflow-x:hidden;height:220px" ng-show="mapTableStatus.wasteWater">
 									<table class="table table-hover table-responsive"  style="font-size:14px">
-										<tr ng-repeat="wasteWaterOne in wasteWaterMarkerList">
+										<tr v-repeat="wasteWaterOne in wasteWaterMarkerList">
 											<td style="width:25%">{{wasteWaterOne.monitor}}</td>
 											<td style="width:25%"><span>{{wasteWaterOne.index_discharge[1].toFixed(2)}}</span></td>
 											<td style="width:17%"><span>{{wasteWaterOne.index_cod.toFixed(2)}}</span></td>
@@ -189,8 +189,8 @@
 									<div class="col-md-3">
 										<h4>水质监测点选择</h4>
 										<div style="font-size:14px;">
-											<div class="radio" ng-repeat="waterQualityOne in waterQualityCurrentList"><label>
-												<input type="radio" ng-model="waterQualityCurrentListSelected" ng-value="waterQualityOne.monitor" name="waterQualityCurrentListRadio" ng-click="waterQualityCurrentChange(waterQualityOne)">{{waterQualityOne.monitor}}
+											<div class="radio" v-repeat="waterQualityOne in waterQualityCurrentList"><label>
+												<input type="radio" v-model="waterQualityCurrentListSelected" ng-value="waterQualityOne.monitor" name="waterQualityCurrentListRadio" ng-click="waterQualityCurrentChange(waterQualityOne)">{{waterQualityOne.monitor}}
 											</label></div>
 										</div>
 										<hr>
@@ -246,8 +246,8 @@
 									<div class="col-md-3">
 										<h4>废水排放指标选择</h4>
 										<div style="font-size:14px;">
-											<div class="radio" ng-repeat="wasteWaterOne in wasteWaterCurrentList"><label>
-												<input type="radio" ng-model="wasteWaterCurrentListSelected" ng-value="wasteWaterOne" name="wasteWaterCurrentListRadio" ng-click="wasteWaterCurrentChange(wasteWaterOne)">{{wasteWaterOne}}
+											<div class="radio" v-repeat="wasteWaterOne in wasteWaterCurrentList"><label>
+												<input type="radio" v-model="wasteWaterCurrentListSelected" ng-value="wasteWaterOne" name="wasteWaterCurrentListRadio" ng-click="wasteWaterCurrentChange(wasteWaterOne)">{{wasteWaterOne}}
 											</label></div>
 										</div>
 										<hr>
@@ -303,8 +303,8 @@
 									<div class="col-md-3">
 										<h4>水情监测点选择</h4>
 										<div style="font-size:14px;">
-											<div class="radio" ng-repeat="waterConditionOne in waterConditionCurrentList"><label>
-												<input type="radio" ng-model="waterConditionCurrentListSelected" ng-value="waterConditionOne.monitor" name="waterConditionCurrentListRadio" ng-click="waterConditionCurrentChange(waterConditionOne)">{{waterConditionOne.monitor}}
+											<div class="radio" v-repeat="waterConditionOne in waterConditionCurrentList"><label>
+												<input type="radio" v-model="waterConditionCurrentListSelected" ng-value="waterConditionOne.monitor" name="waterConditionCurrentListRadio" ng-click="waterConditionCurrentChange(waterConditionOne)">{{waterConditionOne.monitor}}
 											</label></div>
 										</div>
 										<hr>

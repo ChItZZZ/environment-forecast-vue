@@ -40,12 +40,12 @@
                 <li>
                   <div class="class-filter-input-wrapper">
                     <form>
-                      <input type="text" ng-model="searchText" class="class-filter-input form-control" placeholder=""></form>
+                      <input type="text" v-model="searchText" class="class-filter-input form-control" placeholder=""></form>
                   </div>
                 </li>
               </ul>
               <ul class="nav sidenav storage-data-list" style="overflow-y:auto">
-                <li class="cla-item" ng-class="{'active': $state.params.table == tableItem.table.name}" ng-repeat="tableItem in tableList | filter:searchText">
+                <li class="cla-item" ng-class="{'active': $state.params.table == tableItem.table.name}" v-repeat="tableItem in tableList | filter:searchText">
                   <a href="#/data?table={{tableItem.table.name}}">
                     <span class="cla-name">{{tableItem.table.description}}</span>
                   </a>
