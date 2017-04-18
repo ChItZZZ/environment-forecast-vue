@@ -25,10 +25,6 @@
                 <a>
                     <img ng-src="{{ domain.icon }}" height="40"></a>
                 <span ng-bind-html='domain.status | domainStatusHTML'></span>
-                <!-- <div class="pull-right title-desc">
-                &nbsp;&nbsp;更新时间：{{ domain.update_time |  date:'yyyy年MM月dd日'}}
-            </div>
-            -->
             <div class="pull-right title-desc">&nbsp;&nbsp;</div>
             <div class="pull-right title-desc" style="width:300px;overflow:hidden;" ioc-marquee>
                 <span v-repeat="news in domain.selectedCategory.news">

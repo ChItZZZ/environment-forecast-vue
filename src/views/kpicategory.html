@@ -30,8 +30,6 @@
                   <p class="nav-item-title">
                     <a  style="color: white">{{tab.name}}</a>
                   </p>
-                  <!-- <p class="nav-item-title">{{tab.name}}</p>
-                -->
               </div>
             </div>
           </div>
@@ -57,8 +55,6 @@
           <div class="clear"></div>
         </h3>
 
-        <!-- <div class="desc">本月太仓市经济有所好转，服务业收入有所增加，税收基本稳定</div>
-      -->
       <div>
         <div class="row">
           <div class="col-md-12">
@@ -77,13 +73,9 @@
                           <th style="width:30%;">关键业绩指标(KPI)名称</th>
                           <th style="">当前状态</th>
                           <th style="text-align:center;border-right:none;">KPI值</th>
-                          <!-- <th style="border-left:none;"></th> -->
                           <th>数据来源</th>
-                          <!-- <th style="text-align:center;">更新频率</th>
-                        -->
                         <th>统计时间</th>
                      
-                      <!-- <th>操作</th> -->
                     </tr>
                   </thead>
                   <tbody>
@@ -97,17 +89,9 @@
                       <td class="tr-kpicolor" style="text-align:center; border-right:none;">
                         <span class="kpi-value">{{kpi | unit_trans}}</span>
                       </td>
-                      <!-- <td style="border-left:none;"> <i class="ioc-icon ioc-icon-green"></i>
-                      </td> -->
                       <td class="tr-kpidepartment">{{kpi.department.name}}</td>
-                      <!-- <td style="text-align:center;">{{ kpi.type | kpiType }}</td>
-                    -->
                     <td class="tr-kpidate">{{kpi |  applyDateFilter }}</td>
                  
-                 <!--  <td>
-                    <label class="btn {{kpi.data.status | kpiStatusClass}} status" style="color: white"
-                                                                   ng-click="changeKPI(class,kpi)">查看走势</label>
-                  </td> -->
                 </tr>
               </tbody>
             </table>
@@ -123,8 +107,6 @@
               <p class="ioc-panel-desc-title">
                 <img src="/images/common/titles/one-sentence.png"/>
               </p>
-              <!-- <p class="ioc-panel-desc-body" ng-bind-html="class.data[class.select_index].description"></p>
-            -->
             <div ng-if="class.data[class.select_index].kpiStatus.status != 'nodata'">
               <p>
                 {{ class.curExplain.date }}{{class.curKpi.name}} KPI 值为 {{class.curKpi | unit_trans}}。
