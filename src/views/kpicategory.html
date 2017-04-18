@@ -5,7 +5,7 @@
         <a href="/">首页</a>
       </li>
       <li>
-        <a href="" ng-click="load()">{{domainName}}</a>
+        <a href="" @click="load()">{{domainName}}</a>
       </li>
       <li class="active">{{categoryName}}</li>
 
@@ -80,7 +80,7 @@
                   </thead>
                   <tbody>
 
-                    <tr v-repeat="kpi in class.data | orderBy:'sortOrder'" ng-click="changeKPI(class,kpi)" class="hover-tr">
+                    <tr v-repeat="kpi in class.data | orderBy:'sortOrder'" @click="changeKPI(class,kpi)" class="hover-tr">
                       <td class="tr-kpiname">{{kpi.name}}</td>
                       <td class="tr-kpistatus">
                         <label class="label {{kpi.data.status | kpiStatusClass}} status">{{ kpi.data.status | kpiStatusText}}</label>
@@ -99,8 +99,8 @@
           <div class="col-md-4">
             <div class="panel-operation">
               <div class="btn-group">
-                <button type="button" class="btn btn-default" id="" ng-click="loadChart(class, class.curKpi, 'short')">{{class.curShortBtnText}}</button>
-                <button type="button" class="btn btn-default" id="" ng-click="loadChart(class, class.curKpi, 'long')">{{class.curLongBtnText}}</button>
+                <button type="button" class="btn btn-default" id="" @click="loadChart(class, class.curKpi, 'short')">{{class.curShortBtnText}}</button>
+                <button type="button" class="btn btn-default" id="" @click="loadChart(class, class.curKpi, 'long')">{{class.curLongBtnText}}</button>
               </div>
             </div>
             <div class="ioc-panel-desc">

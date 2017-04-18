@@ -33,25 +33,25 @@
 							<div class="panel-body"  style="height: 650px">
 								<h4>水质</h4>
 								<div style="margin-top:5px;font-size:16px"	>
-									<button class="btn" ng-class="getButtonStatus(waterQualityStatus.status)" ng-click="waterQualityBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp江河水质情况</button>
+									<button class="btn" ng-class="getButtonStatus(waterQualityStatus.status)" @click="waterQualityBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp江河水质情况</button>
 									{{waterQualityStatus.sentence}}
 								</div>
 								<hr />
 								<h4>水情</h4>
 
 								<div style="margin-top:5px;font-size:16px">
-									<button class="btn" ng-click="waterConditionBtn()" ng-class="getButtonStatus(waterConditionStatus.status)"><span class="glyphicon glyphicon-hand-right"></span>&nbsp江河水情情况</button>
+									<button class="btn" @click="waterConditionBtn()" ng-class="getButtonStatus(waterConditionStatus.status)"><span class="glyphicon glyphicon-hand-right"></span>&nbsp江河水情情况</button>
 									{{waterConditionStatus.sentence}}
 								</div>
 								<hr />
 								<h4>废水排放</h4>
 
 								<div style="margin-top:5px;font-size:16px">
-									<button class="btn" ng-click="wasteWaterBtn()" ng-class="getButtonStatus(wasteWaterStatus.status)"><span class="glyphicon glyphicon-hand-right"></span>&nbsp工业废水排放</button>
+									<button class="btn" @click="wasteWaterBtn()" ng-class="getButtonStatus(wasteWaterStatus.status)"><span class="glyphicon glyphicon-hand-right"></span>&nbsp工业废水排放</button>
 									{{wasteWaterStatus.sentence}}
 								</div>
 								<hr>
-								<div ng-show="mapTableStatus.waterQuality">
+								<div v-show="mapTableStatus.waterQuality">
 									<h5 align="right" style="padding-top: 0px">(更新时间:&nbsp{{waterQualityCurrentDateTime.year + '-'
 										+ waterQualityCurrentDateTime.month + '-'
 										+ waterQualityCurrentDateTime.day + ' '
@@ -66,7 +66,7 @@
 										</tr>
 									</table>
 								</div>
-								<div style="overflow: auto;overflow-x:hidden;height: 240px" ng-show="mapTableStatus.waterQuality">
+								<div style="overflow: auto;overflow-x:hidden;height: 240px" v-show="mapTableStatus.waterQuality">
 									<table class="table table-hover table-responsive" style="font-size:14px">
 										<tr v-repeat="waterQualityOne in waterQualityMarkerList">
 											<td style="width:20%">{{waterQualityOne.monitor}}</td>
@@ -77,7 +77,7 @@
 										</tr>
 									</table>
 								</div>
-								<div ng-show="mapTableStatus.waterCondition">
+								<div v-show="mapTableStatus.waterCondition">
 									<h5 align="right" style="padding-top: 0px">(更新时间:&nbsp{{waterConditionCurrentDateTime.year + '-'
 										+ waterConditionCurrentDateTime.month + '-'
 										+ waterConditionCurrentDateTime.day + ' '
@@ -90,7 +90,7 @@
 										</tr>
 									</table>
 								</div>
-								<div style="overflow: auto;overflow-x:hidden;height: 240px" ng-show="mapTableStatus.waterCondition">
+								<div style="overflow: auto;overflow-x:hidden;height: 240px" v-show="mapTableStatus.waterCondition">
 									<table class="table table-hover table-responsive"  style="font-size:14px">
 										<tr v-repeat="waterConditionOne in waterConditionMarkerList">
 											<td style="width:30%">{{waterConditionOne.monitor}}</td>
@@ -99,7 +99,7 @@
 										</tr>
 									</table>
 								</div>
-								<div ng-show="mapTableStatus.wasteWater">
+								<div v-show="mapTableStatus.wasteWater">
 									<h5 align="right" style="padding-top: 0px">(更新时间:&nbsp{{wasteWaterCurrentDateTime.year + '-'
 										+ wasteWaterCurrentDateTime.month + '-'
 										+ wasteWaterCurrentDateTime.day}})</h5>
@@ -113,7 +113,7 @@
 										</tr>
 									</table>
 								</div>
-								<div style="overflow: auto; overflow-x:hidden;height:220px" ng-show="mapTableStatus.wasteWater">
+								<div style="overflow: auto; overflow-x:hidden;height:220px" v-show="mapTableStatus.wasteWater">
 									<table class="table table-hover table-responsive"  style="font-size:14px">
 										<tr v-repeat="wasteWaterOne in wasteWaterMarkerList">
 											<td style="width:25%">{{wasteWaterOne.monitor}}</td>
@@ -190,7 +190,7 @@
 										<h4>水质监测点选择</h4>
 										<div style="font-size:14px;">
 											<div class="radio" v-repeat="waterQualityOne in waterQualityCurrentList"><label>
-												<input type="radio" v-model="waterQualityCurrentListSelected" ng-value="waterQualityOne.monitor" name="waterQualityCurrentListRadio" ng-click="waterQualityCurrentChange(waterQualityOne)">{{waterQualityOne.monitor}}
+												<input type="radio" v-model="waterQualityCurrentListSelected" ng-value="waterQualityOne.monitor" name="waterQualityCurrentListRadio" @click="waterQualityCurrentChange(waterQualityOne)">{{waterQualityOne.monitor}}
 											</label></div>
 										</div>
 										<hr>
@@ -247,7 +247,7 @@
 										<h4>废水排放指标选择</h4>
 										<div style="font-size:14px;">
 											<div class="radio" v-repeat="wasteWaterOne in wasteWaterCurrentList"><label>
-												<input type="radio" v-model="wasteWaterCurrentListSelected" ng-value="wasteWaterOne" name="wasteWaterCurrentListRadio" ng-click="wasteWaterCurrentChange(wasteWaterOne)">{{wasteWaterOne}}
+												<input type="radio" v-model="wasteWaterCurrentListSelected" ng-value="wasteWaterOne" name="wasteWaterCurrentListRadio" @click="wasteWaterCurrentChange(wasteWaterOne)">{{wasteWaterOne}}
 											</label></div>
 										</div>
 										<hr>
@@ -258,10 +258,10 @@
 											<p class="ioc-panel-desc-body">
 
 												<h5>{{wasteWaterCurrentDateTime.year}}年{{wasteWaterCurrentDateTime.month}}月{{wasteWaterCurrentDateTime.day}}日</h5>
-												<div ng-show="wasteWaterDischargeOneSentenceStatus">
+												<div v-show="wasteWaterDischargeOneSentenceStatus">
                                                     <h5>废气排放量正常</h5>
                                                 </div>
-                                                <div ng-show="!wasteWaterDischargeOneSentenceStatus">
+                                                <div v-show="!wasteWaterDischargeOneSentenceStatus">
 												<h5>前5的污染源中</h5>
 												<h5>{{wasteWaterOneSentence.index}}</h5>
 												<h5>
@@ -283,7 +283,7 @@
 												</div>
 											</p>
 											<p style="margin-top:20px">
-                                                <h5 ng-show="!wasteWaterDischargeOneSentenceStatus"><span style="color:#DF5353">红色线----</span> 代表问题界线</h5>
+                                                <h5 v-show="!wasteWaterDischargeOneSentenceStatus"><span style="color:#DF5353">红色线----</span> 代表问题界线</h5>
                                             </p>
 										</div>
 									</div>
@@ -304,7 +304,7 @@
 										<h4>水情监测点选择</h4>
 										<div style="font-size:14px;">
 											<div class="radio" v-repeat="waterConditionOne in waterConditionCurrentList"><label>
-												<input type="radio" v-model="waterConditionCurrentListSelected" ng-value="waterConditionOne.monitor" name="waterConditionCurrentListRadio" ng-click="waterConditionCurrentChange(waterConditionOne)">{{waterConditionOne.monitor}}
+												<input type="radio" v-model="waterConditionCurrentListSelected" ng-value="waterConditionOne.monitor" name="waterConditionCurrentListRadio" @click="waterConditionCurrentChange(waterConditionOne)">{{waterConditionOne.monitor}}
 											</label></div>
 										</div>
 										<hr>

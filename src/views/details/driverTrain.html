@@ -43,7 +43,7 @@
 									<h4>驾校培训信息类别选择</h4>
 									<div class="radio" v-repeat="driverTrainOne in driverTrainList">
 										<label>
-											<input type="radio" v-model="driverTrainKindSelected" ng-value="driverTrainOne.name" name="driverTrainList" ng-click="driverTrainKindChange(driverTrainOne)">
+											<input type="radio" v-model="driverTrainKindSelected" ng-value="driverTrainOne.name" name="driverTrainList" @click="driverTrainKindChange(driverTrainOne)">
 								            <font size="3">{{driverTrainOne.name}}</font>
 								        </label>
 									</div>

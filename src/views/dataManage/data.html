@@ -1,9 +1,9 @@
 <div ng-if="currTable" >
   <div class="btn-group">
-    <button class="btn btn-sm btn-default" ng-click="addData()">添加数据</button>
-    <button class="btn btn-sm btn-default" ng-click="addBatchData()">导入数据</button>
-    <button class="btn btn-sm btn-default" ng-click="queryData()">高级查询</button>
-    <button class="btn btn-sm btn-default" ng-click="reloadData()">刷新全部</button>
+    <button class="btn btn-sm btn-default" @click="addData()">添加数据</button>
+    <button class="btn btn-sm btn-default" @click="addBatchData()">导入数据</button>
+    <button class="btn btn-sm btn-default" @click="queryData()">高级查询</button>
+    <button class="btn btn-sm btn-default" @click="reloadData()">刷新全部</button>
   </div>
   <pagination ng-change="pageChange()" total-items="pageInfo.totalItems" items-per-page="pageInfo.pageSize" v-model="pageInfo.pageNumber" max-size="1" class="pagination-md" boundary-links="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页" style="margin:0px 0px;float: right"></pagination>
   <div class="table-responsive" style="margin-top:10px">
@@ -17,8 +17,8 @@
         <tr v-repeat="dataItem in dataList">
           <td v-repeat="dateTypeOne in currDateTypeArr" style="min-width: 50px;width:50px;max-width:50px">{{dataItem[dateTypeOne]}}</td>
           <td v-repeat="column in currTable.columns" ng-style="getMinWidth(column.width)">{{getDictNameOrData(dataItem,column)}}</td>
-          <td style="min-width: 80px;width:80px;max-width:80px"> <i class="fa fa-pencil-square-o" style="cursor: pointer;" ng-click="updateData(dataItem)"></i>
-            &nbsp; <i class="fa fa-remove" style="cursor: pointer;" ng-click="deleteData(dataItem)"></i>
+          <td style="min-width: 80px;width:80px;max-width:80px"> <i class="fa fa-pencil-square-o" style="cursor: pointer;" @click="updateData(dataItem)"></i>
+            &nbsp; <i class="fa fa-remove" style="cursor: pointer;" @click="deleteData(dataItem)"></i>
           </td>
         </tr>
       </tbody>
@@ -28,7 +28,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="$hide()">×</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" @click="$hide()">×</button>
           <h4 class="modal-title ng-scope">添加数据</h4>
         </div>
         <div class="modal-body form-horizontal" style="overflow-y: auto;max-height: 400px;margin-bottom: 10px">
@@ -58,14 +58,14 @@
                <ng-form name="addDataForm_sub1">
               <div class="col-sm-6" ng-if="column.type == 'ddouble'">
                 <input v-model="addDataTemp[column.name]" name="a" class="form-control" type="number" required>
-                <span style="color:red" ng-show="addDataForm_sub1.a.$dirty && addDataForm_sub1.a.$invalid">请输入有效数字</span></ng-form>
+                <span style="color:red" v-show="addDataForm_sub1.a.$dirty && addDataForm_sub1.a.$invalid">请输入有效数字</span></ng-form>
               </div>
               <div class="col-sm-6" ng-if="column.type == 'sstring'">
                 <input v-model="addDataTemp[column.name]" class="form-control" type="text" required></div>
                 <ng-form name="addDataForm_sub2">
               <div class="col-sm-6" ng-if="column.type == 'iint'">
                 <input v-model="addDataTemp[column.name]" name="b" class="form-control" type="text" onkeyup="this.value=this.value.replace(/[^(\d)]/g,'')" onpaste="this.value=this.value.replace(/[^(\d)]/g,'')" required>
-                <span style="color:red" ng-show="addDataForm_sub2.b.$dirty && addDataForm_sub2.b.$invalid">请输入有效整数</span>
+                <span style="color:red" v-show="addDataForm_sub2.b.$dirty && addDataForm_sub2.b.$invalid">请输入有效整数</span>
               </div>
               <div class="col-sm-6" ng-if="column.type == 'enum'">
                 <select class="form-control" v-model="addDataTemp[column.name]" ng-options="enum for enum in column.enumArr.split(',')" required></select>
@@ -74,7 +74,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-default ng-scope" ng-click="addDataPre()" ng-disabled="addDataForm.$invalid&&(addDataTempDate.date!='')">添加</button>
+          <button class="btn btn-default ng-scope" @click="addDataPre()" ng-disabled="addDataForm.$invalid&&(addDataTempDate.date!='')">添加</button>
           <button class="btn btn-default ng-scope" data-dismiss="modal">关闭</button>
         </div>
       </div>
@@ -90,8 +90,8 @@
 
         <div>
           <div class="modal-footer">
-            <button ng-click="addDataProcess()" class="btn btn-primary ng-scope" data-dismiss="modal">确定</button>
-            <button ng-click="addDataCancel()" class="btn btn-default ng-scope">取消</button>
+            <button @click="addDataProcess()" class="btn btn-primary ng-scope" data-dismiss="modal">确定</button>
+            <button @click="addDataCancel()" class="btn btn-default ng-scope">取消</button>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="$hide()">×</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" @click="$hide()">×</button>
           <h4 class="modal-title ng-scope">更新数据</h4>
         </div>
         <div class="modal-body form-horizontal">
@@ -134,7 +134,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-default ng-scope" ng-click="updateDataPre()"  ng-disabled="updateDataForm.$invalid">更新</button>
+          <button class="btn btn-default ng-scope" @click="updateDataPre()"  ng-disabled="updateDataForm.$invalid">更新</button>
           <button class="btn btn-default ng-scope" data-dismiss="modal">关闭</button>
         </div>
       </div>
@@ -150,8 +150,8 @@
 
         <div>
           <div class="modal-footer">
-            <button ng-click="updateDataProcess()" class="btn btn-primary ng-scope" data-dismiss="modal">确定</button>
-            <button ng-click="updateDataCancel()" class="btn btn-default ng-scope">取消</button>
+            <button @click="updateDataProcess()" class="btn btn-primary ng-scope" data-dismiss="modal">确定</button>
+            <button @click="updateDataCancel()" class="btn btn-default ng-scope">取消</button>
           </div>
         </div>
       </div>
@@ -167,7 +167,7 @@
 
         <div>
           <div class="modal-footer">
-            <button ng-click="deleteDataProcess()" class="btn btn-primary ng-scope" data-dismiss="modal">确定</button>
+            <button @click="deleteDataProcess()" class="btn btn-primary ng-scope" data-dismiss="modal">确定</button>
             <button data-dismiss="modal" class="btn btn-default ng-scope">取消</button>
           </div>
         </div>
@@ -178,7 +178,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="$hide()">×</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" @click="$hide()">×</button>
           <h4 class="modal-title ng-scope">高级查询</h4>
         </div>
         <div class="modal-body" style="overflow-y: auto;max-height: 400px;">
@@ -213,11 +213,11 @@
                   <input type="text" class="form-control" style="width:160px" v-model="queryOne.value1" placeholder="比较值" required></div>
               </div>
               <div class="form-group col-sm-1">
-                <span class="glyphicon glyphicon-remove col-sm-4" style="cursor:pointer;padding:8px 0px;" ng-click="queryArrDelete(queryOne)"></span>
+                <span class="glyphicon glyphicon-remove col-sm-4" style="cursor:pointer;padding:8px 0px;" @click="queryArrDelete(queryOne)"></span>
               </div>
             </div>
             <div class="col-sm-12" style="padding:0 30px">
-              <button class="btn btn-success" ng-click="queryArrAdd()" data-toggle="tooltip" data-placement="top" title="添加查询条件">
+              <button class="btn btn-success" @click="queryArrAdd()" data-toggle="tooltip" data-placement="top" title="添加查询条件">
                 添加查询条件&nbsp&nbsp
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
               </button>
@@ -225,7 +225,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-default ng-scope" ng-click="queryDataProcess()"  ng-disabled="queryDataForm.$invalid">查询</button>
+          <button class="btn btn-default ng-scope" @click="queryDataProcess()"  ng-disabled="queryDataForm.$invalid">查询</button>
           <button class="btn btn-default ng-scope" data-dismiss="modal">关闭</button>
         </div>
       </div>
@@ -235,7 +235,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="$hide()">×</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" @click="$hide()">×</button>
           <h4 class="modal-title ng-scope">导入数据</h4>
         </div>
         <div class="modal-body form-horizontal">
@@ -250,7 +250,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-default ng-scope" ng-click="addBatchDataPre()" ng-disabled="addBatchDataForm.$invalid">导入</button>
+          <button class="btn btn-default ng-scope" @click="addBatchDataPre()" ng-disabled="addBatchDataForm.$invalid">导入</button>
           <button class="btn btn-default ng-scope" data-dismiss="modal">关闭</button>
         </div>
       </div>
@@ -265,8 +265,8 @@
 
         <div>
           <div class="modal-footer">
-            <button ng-click="addBatchDataProcess()" class="btn btn-primary ng-scope" data-dismiss="modal">确定</button>
-            <button ng-click="addBatchDataCancel()" class="btn btn-default ng-scope">取消</button>
+            <button @click="addBatchDataProcess()" class="btn btn-primary ng-scope" data-dismiss="modal">确定</button>
+            <button @click="addBatchDataCancel()" class="btn btn-default ng-scope">取消</button>
           </div>
         </div>
       </div>

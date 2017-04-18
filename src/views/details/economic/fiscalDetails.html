@@ -23,10 +23,10 @@
           <div class="panel panel-primary">
             <div class="panel-heading">
               财政收入 
-              <span ng-show="ai.iaccmAmount==0">（2017年1月开始未上报）</span>
+              <span v-show="ai.iaccmAmount==0">（2017年1月开始未上报）</span>
               <span class="glyphicon glyphicon-question-sign pull-right"></span>
             </div>
-            <span ng-show="false">{{ai = dataMap.FiscalData.lastestObject}}</span>
+            <span v-show="false">{{ai = dataMap.FiscalData.lastestObject}}</span>
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-7 chart-panel">

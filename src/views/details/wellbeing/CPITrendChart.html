@@ -13,7 +13,7 @@
 <div class="details-content">
   <div class="container">
     <tabset>
-      <tab v-repeat="tab in tabMapData" active="tab.active" heading="{{tab.label}}" id="{{tab.id}}" ng-click="tabChangeFunction('{{tab.name}}')" name="{{tab.name}}"></tab>
+      <tab v-repeat="tab in tabMapData" active="tab.active" heading="{{tab.label}}" id="{{tab.id}}" @click="tabChangeFunction('{{tab.name}}')" name="{{tab.name}}"></tab>
     </tabset>
   </div>
 </div>
@@ -154,7 +154,7 @@
               <highchart id="foodPriceHighChart" config="foodPriceHighChartOption"></highchart>
             </div>
             <div class="span3 col-md-3">
-              <button class="btn btn-default btn-block" ng-click="initFoodPriceHighChart()" style="background-color:lightgreen">恢复图表至默认</button>
+              <button class="btn btn-default btn-block" @click="initFoodPriceHighChart()" style="background-color:lightgreen">恢复图表至默认</button>
               <hr>
               <h4 style="padding-left:60px">农副产品种类</h4>
               <p style="padding-left:30px;font-size:14px">
@@ -162,7 +162,7 @@
               </p>
               <div class="row">
                 <div v-repeat="tempFoodType in PRICEDATA" style="margin-bottom: 10px">
-                  <button class="btn btn-default btn-block" ng-click="tempFoodType.isCollapsed = !tempFoodType.isCollapsed">{{tempFoodType.name}}</button>
+                  <button class="btn btn-default btn-block" @click="tempFoodType.isCollapsed = !tempFoodType.isCollapsed">{{tempFoodType.name}}</button>
                   <div collapse="!tempFoodType.isCollapsed" style="border: 1px solid black; background-color:skyblue">
                     <div class="row">
                       <div class="col-md-6" v-repeat="tempFood in tempFoodType.data" style="font-size: 14px">

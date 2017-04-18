@@ -20,7 +20,7 @@
 							 工业总产值(累计值)
 							<span class="glyphicon glyphicon-question-sign pull-right"></span>
 						</div>
-						<span ng-show="false">{{ai = dataMap.Ivalue.lastestObject}}</span>
+						<span v-show="false">{{ai = dataMap.Ivalue.lastestObject}}</span>
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-7 chart-panel">
@@ -50,7 +50,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="studyQualityOne in studyQuality">
 										<label>
-											<input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" ng-click="studyQualityKindChange(studyQualityOne)">
+											<input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" @click="studyQualityKindChange(studyQualityOne)">
 								            {{studyQualityOne.name}}
 								        </label>
 									</div>
@@ -67,7 +67,7 @@
 								规模以上新兴产业产值(累计值)
 							<span class="glyphicon glyphicon-question-sign pull-right"></span>
 						</div>
-						<span ng-show="false">{{bi = dataMap.NIvalue.lastestObject}}</span>
+						<span v-show="false">{{bi = dataMap.NIvalue.lastestObject}}</span>
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-7 chart-panel">
@@ -118,7 +118,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="schoolQualityOne in schoolQuality">
 										<label>
-											<input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" ng-click="schoolQualityKindChange(schoolQualityOne)">
+											<input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" @click="schoolQualityKindChange(schoolQualityOne)">
 								            {{schoolQualityOne.name}}
 								        </label>
 									</div>
@@ -132,14 +132,14 @@
 					</div>
 				</div>
 			</tab>
-			<tab heading="工业销售、利润、利税" id="tab_eduContrib" ng-click="loadIndustryProfit();">
+			<tab heading="工业销售、利润、利税" id="tab_eduContrib" @click="loadIndustryProfit();">
 				<div class="row" style="margin-top: 20px;">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
 								工业主营业务收入(累计值)
 							<span class="glyphicon glyphicon-question-sign pull-right"></span>
 						</div>
-						<span ng-show="false">{{ci = dataMap.NSvalue.lastestObject}}</span>
+						<span v-show="false">{{ci = dataMap.NSvalue.lastestObject}}</span>
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-7 chart-panel">
@@ -171,7 +171,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="contribOne in contrib">
 										<label>
-											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" ng-click="contribKindChange(contribOne)">
+											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" @click="contribKindChange(contribOne)">
 								            {{contribOne.name}}
 								        </label>
 									</div>
@@ -188,7 +188,7 @@
 								工业利润(累计值)
 							<span class="glyphicon glyphicon-question-sign pull-right"></span>
 						</div>
-						<span ng-show="false">{{di = dataMap.NPvalue.lastestObject}}</span>
+						<span v-show="false">{{di = dataMap.NPvalue.lastestObject}}</span>
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-7 chart-panel">
@@ -219,7 +219,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="contribOne in contrib">
 										<label>
-											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" ng-click="contribKindChange(contribOne)">
+											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" @click="contribKindChange(contribOne)">
 								            {{contribOne.name}}
 								        </label>
 									</div>
@@ -237,7 +237,7 @@
 								工业利税(累计值)
 							<span class="glyphicon glyphicon-question-sign pull-right"></span>
 						</div>
-						<span ng-show="false">{{ei = dataMap.NProfitvalue.lastestObject}}</span>
+						<span v-show="false">{{ei = dataMap.NProfitvalue.lastestObject}}</span>
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-7 chart-panel">
@@ -268,7 +268,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="contribOne in contrib">
 										<label>
-											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" ng-click="contribKindChange(contribOne)">
+											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" @click="contribKindChange(contribOne)">
 								            {{contribOne.name}}
 								        </label>
 									</div>

@@ -33,25 +33,25 @@
                                 <h4>空气质量</h4>
 
                                 <div style="margin-top:5px;font-size:16px">
-                                    <button class="btn" ng-class="getButtonStatus(airQualityStatus.status)" ng-click="airQualityBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp城区空气质量</button>
+                                    <button class="btn" ng-class="getButtonStatus(airQualityStatus.status)" @click="airQualityBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp城区空气质量</button>
                                     {{airQualityStatus.sentence}}
                                 </div>
                                 <hr/>
                                <!--  <h4>气象因素</h4>
 
                                 <div style="margin-top:5px;font-size:16px">
-                                    <button class="btn" ng-class="getButtonStatus(airConditionStatus.status)" ng-click="airConditionBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp全市气象状况</button>
+                                    <button class="btn" ng-class="getButtonStatus(airConditionStatus.status)" @click="airConditionBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp全市气象状况</button>
                                     {{airConditionStatus.sentence}}
                                 </div>
                                 <hr/> -->
                                 <h4>废气排放</h4>
 
                                 <div style="margin-top:5px;font-size:16px">
-                                    <button class="btn" ng-class="getButtonStatus(wasteAirStatus.status)" ng-click="wasteAirBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp工业废气排放</button>
+                                    <button class="btn" ng-class="getButtonStatus(wasteAirStatus.status)" @click="wasteAirBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp工业废气排放</button>
                                     {{wasteAirStatus.sentence}}
                                 </div>
                                 <hr>
-                                <div ng-show="mapTableStatus.airQuality">
+                                <div v-show="mapTableStatus.airQuality">
                                     <h5 align="right" style="padding-top: 0px">(更新时间:&nbsp{{airQualityCurrentDateTime.year + '-'
                                             + airQualityCurrentDateTime.month + '-'
                                             + airQualityCurrentDateTime.day + ' '
@@ -68,7 +68,7 @@
                                     </table>
 
                                 </div>
-                                <div style="overflow: auto; overflow-x:hidden;height: 340px" ng-show="mapTableStatus.airQuality">
+                                <div style="overflow: auto; overflow-x:hidden;height: 340px" v-show="mapTableStatus.airQuality">
                                     <table class="table table-hover table-responsive" style="font-size:14px">
                                         <tr v-repeat="airQualityOne in airQualityMarkerList">
                                             <td style="width:30%">{{airQualityOne.monitor}}</td>
@@ -81,7 +81,7 @@
                                     </table>
 
                                 </div>
-                                <!-- <div ng-show="mapTableStatus.airCondition">
+                                <!-- <div v-show="mapTableStatus.airCondition">
                                     <h5 align="right" style="padding-top: 0px">(更新时间:&nbsp{{airConditionCurrentDateTime.year + '-'
                                         + airConditionCurrentDateTime.month + '-'
                                         + airConditionCurrentDateTime.day + ' '
@@ -96,7 +96,7 @@
                                         </tr>
                                     </table>
                                 </div>
-                                <div style="overflow: scroll;overflow-x:hidden;height:340px" ng-show="mapTableStatus.airCondition">
+                                <div style="overflow: scroll;overflow-x:hidden;height:340px" v-show="mapTableStatus.airCondition">
                                     <table class="table table-hover table-responsive" style="font-size:14px">
                                         <tr v-repeat="airConditionOne in airConditionMarkerList">
                                             <td style="width:20%">{{airConditionOne.monitor}}</td>
@@ -107,7 +107,7 @@
                                         </tr>
                                     </table>
                                 </div> -->
-                                <div ng-show="mapTableStatus.wasteAir">
+                                <div v-show="mapTableStatus.wasteAir">
                                     <h5 align="right" style="padding-top: 0px">(更新时间:&nbsp{{wasteAirCurrentDateTime.year + '-'
                                         + wasteAirCurrentDateTime.month + '-'
                                         + wasteAirCurrentDateTime.day }})</h5>
@@ -121,7 +121,7 @@
                                         </tr>
                                     </table>
                                 </div>
-                                <div style="overflow: auto; overflow-x:hidden;height: 320px" ng-show="mapTableStatus.wasteAir">
+                                <div style="overflow: auto; overflow-x:hidden;height: 320px" v-show="mapTableStatus.wasteAir">
                                     <table class="table table-hover table-responsive" style="font-size:14px">
                                         <tr v-repeat="wasteAirOne in wasteAirMarkerList">
                                             <td style="width:20%">{{wasteAirOne.monitor.slice(0,6)}}</td>
@@ -224,7 +224,7 @@
                                         <h4>空气质量监测点选择</h4>
                                         <div style="font-size:14px;">
                                             <div class="radio" v-repeat="airQualityOne in airQualityCurrentList"><label>
-                                                <input type="radio" v-model="airQualityCurrentListSelected" ng-value="airQualityOne.monitor" name="airQualityCurrentListRadio" ng-click="airQualityCurrentChange(airQualityOne)">{{airQualityOne.monitor}}
+                                                <input type="radio" v-model="airQualityCurrentListSelected" ng-value="airQualityOne.monitor" name="airQualityCurrentListRadio" @click="airQualityCurrentChange(airQualityOne)">{{airQualityOne.monitor}}
                                             </label></div>
                                         </div>
                                         <hr>
@@ -291,7 +291,7 @@
                                         <h4>废气排放指标选择</h4>
                                         <div style="font-size:14px;">
                                             <div class="radio" v-repeat="wasteAirOne in wasteAirCurrentList"><label>
-                                                <input type="radio" v-model="wasteAirCurrentListSelected" ng-value="wasteAirOne" name="wasteAirCurrentListRadio" ng-click="wasteAirCurrentChange(wasteAirOne)">{{wasteAirOne}}
+                                                <input type="radio" v-model="wasteAirCurrentListSelected" ng-value="wasteAirOne" name="wasteAirCurrentListRadio" @click="wasteAirCurrentChange(wasteAirOne)">{{wasteAirOne}}
                                             </label></div>
                                         </div>
                                         <hr>
@@ -301,10 +301,10 @@
                                             </p>
                                             <p class="ioc-panel-desc-body">
                                                 <h5>{{wasteAirCurrentDateTime.year}}年{{wasteAirCurrentDateTime.month}}月{{wasteAirCurrentDateTime.day}}日</h5>
-                                                <div ng-show="wasteAirDischargeOneSentenceStatus">
+                                                <div v-show="wasteAirDischargeOneSentenceStatus">
                                                     <h5>废气排放量正常</h5>
                                                 </div>
-                                                <div ng-show="!wasteAirDischargeOneSentenceStatus">
+                                                <div v-show="!wasteAirDischargeOneSentenceStatus">
                                                 <h5>所有污染源中</h5>
                                                 <h5>{{wasteAirOneSentence.index}}</h5>
 
@@ -327,7 +327,7 @@
                                                 </div>
                                             </p>
                                             <p style="margin-top:20px">
-                                                <h5 ng-show="!wasteAirDischargeOneSentenceStatus"><span style="color:#DF5353">红色线----</span> 代表问题界线</h5>
+                                                <h5 v-show="!wasteAirDischargeOneSentenceStatus"><span style="color:#DF5353">红色线----</span> 代表问题界线</h5>
                                             </p>
                                         </div>
                                     </div>
@@ -349,7 +349,7 @@
                                         <h4>气象指标选择</h4>
                                         <div style="font-size:14px;">
                                             <div class="radio" v-repeat="airConditionOne in airConditionCurrentList"><label>
-                                                <input type="radio" v-model="airConditionCurrentListSelected" ng-value="airConditionOne" name="airConditionCurrentListRadio" ng-click="airConditionCurrentChange(airConditionOne)">{{airConditionOne}}
+                                                <input type="radio" v-model="airConditionCurrentListSelected" ng-value="airConditionOne" name="airConditionCurrentListRadio" @click="airConditionCurrentChange(airConditionOne)">{{airConditionOne}}
                                             </label></div>
                                         </div>
                                         <hr>

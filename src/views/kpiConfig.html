@@ -62,12 +62,12 @@
 										<h5>{{kpi.description}}</h5>
 									</td>
 									<td>
-										<button class="btn btn-primary" ng-click="kpiQuery(kpi)">查看</button>
-										<button class="btn btn-primary" ng-click="kpiModify(kpi)">修改</button>
-										<button class="btn btn-primary" ng-click="kpiDelConfirmPre(kpi)">删除</button>
-										<button class="btn btn-primary" ng-click="kpiTargetYearSelect(kpi)">目标值</button>
-										<button class="btn btn-primary" ng-click="kpiScope(kpi)">区间设置</button>
-										<button class="btn btn-primary" ng-click="kpiDepartmentConfig(kpi)">局设置</button>
+										<button class="btn btn-primary" @click="kpiQuery(kpi)">查看</button>
+										<button class="btn btn-primary" @click="kpiModify(kpi)">修改</button>
+										<button class="btn btn-primary" @click="kpiDelConfirmPre(kpi)">删除</button>
+										<button class="btn btn-primary" @click="kpiTargetYearSelect(kpi)">目标值</button>
+										<button class="btn btn-primary" @click="kpiScope(kpi)">区间设置</button>
+										<button class="btn btn-primary" @click="kpiDepartmentConfig(kpi)">局设置</button>
 									</td>
 								</tr>
 							</tbody>
@@ -157,7 +157,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="kpiModifyForm.$invalid">确定</button>
+						<button @click="kpiModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="kpiModifyForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -174,8 +174,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiModifyProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
-						<button ng-click="kpiModifyCancel()" class="btn btn-default">取消</button>
+						<button @click="kpiModifyProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
+						<button @click="kpiModifyCancel()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -191,7 +191,7 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiDelProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
+						<button @click="kpiDelProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -233,15 +233,15 @@
 						    		</select>
 						    		<input type="text" class="form-control" style="width:80px" v-model="kpiScope.data2">
 						    		&nbsp&nbsp
-									<span class="glyphicon glyphicon-remove" style="cursor:pointer" ng-click="deleteScope(kpiScope)"></span>
+									<span class="glyphicon glyphicon-remove" style="cursor:pointer" @click="deleteScope(kpiScope)"></span>
 									<span style="display:inline-block;width:120px;text-align: center"><h5>(点击“x”删除)</h5></span>
 									</div>
 					    		</div>
 						    </div>
 						    <div class="col-sm-12" style="margin-top:20px;" align="center">
-						    	<button class="btn btn-success" ng-click="addScope('GREEN')" data-toggle="tooltip" data-placement="top" title="添加“正常”区间">添加区间&nbsp&nbsp<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-						    	<button class="btn btn-warning" ng-click="addScope('YELLOW')" data-toggle="tooltip" data-placement="top" title="添加“轻微问题”区间">添加区间&nbsp&nbsp<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-						    	<button class="btn btn-danger" ng-click="addScope('RED')" data-toggle="tooltip" data-placement="top" title="添加“问题”区间">添加区间&nbsp&nbsp<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+						    	<button class="btn btn-success" @click="addScope('GREEN')" data-toggle="tooltip" data-placement="top" title="添加“正常”区间">添加区间&nbsp&nbsp<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+						    	<button class="btn btn-warning" @click="addScope('YELLOW')" data-toggle="tooltip" data-placement="top" title="添加“轻微问题”区间">添加区间&nbsp&nbsp<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+						    	<button class="btn btn-danger" @click="addScope('RED')" data-toggle="tooltip" data-placement="top" title="添加“问题”区间">添加区间&nbsp&nbsp<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 						    </div>
 						</div>
 					
@@ -249,7 +249,7 @@
 				
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiScopeConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="kpiScopeForm.$invalid">确定</button>
+						<button @click="kpiScopeConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="kpiScopeForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -266,8 +266,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiScopeProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
-						<button ng-click="kpiScopeCancel()" class="btn btn-default">取消</button>
+						<button @click="kpiScopeProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
+						<button @click="kpiScopeCancel()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -290,7 +290,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiTarget()" type="submit" class="btn btn-primary">确定</button>
+						<button @click="kpiTarget()" type="submit" class="btn btn-primary">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -307,7 +307,7 @@
 							<thead class="ioc-thead ">
 							<tr align="center">
 								<td style="width:100px">年份</td>
-								<td style="width:100px" ng-show="!(kpiTargetTemp.kpi.type == 'YEARLY')">月份</td>
+								<td style="width:100px" v-show="!(kpiTargetTemp.kpi.type == 'YEARLY')">月份</td>
 								<td style="width:200px">目标值</td>
 								<td >单位</td>
 							</tr>
@@ -318,7 +318,7 @@
 						<table class="table table-bordered">
 							<tr v-repeat="kpiTarget in kpiTargetTemp.kpiTargetArr">
 								<td style="width:100px">{{formatDateTime(kpiTarget.applyDate).split('-')[0]}}</td>
-								<td style="width:100px" ng-show="!(kpiTargetTemp.kpi.type == 'YEARLY')">{{formatDateTime(kpiTarget.applyDate).split('-')[1]}}</td>
+								<td style="width:100px" v-show="!(kpiTargetTemp.kpi.type == 'YEARLY')">{{formatDateTime(kpiTarget.applyDate).split('-')[1]}}</td>
 								<td style="width:200px"><input v-model="kpiTarget.value" class="form-control input-sm"></td>
 								<td>{{kpiTargetTemp.kpi.unit|unit_val}}</td>
 							</tr>
@@ -329,8 +329,8 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiTargetConfirmPre()" class="btn btn-primary">确定</button>
-						<button ng-click="kpiTargetCancel1()" class="btn btn-default">取消</button>
+						<button @click="kpiTargetConfirmPre()" class="btn btn-primary">确定</button>
+						<button @click="kpiTargetCancel1()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -346,8 +346,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiTargetProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
-						<button ng-click="kpiTargetCancel2()" class="btn btn-default">取消</button>
+						<button @click="kpiTargetProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
+						<button @click="kpiTargetCancel2()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -375,7 +375,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiDepartmentConfigConfirmPre()" class="btn btn-primary" ng-disabled="kpiDepartmentForm.$invalid">确定</button>
+						<button @click="kpiDepartmentConfigConfirmPre()" class="btn btn-primary" ng-disabled="kpiDepartmentForm.$invalid">确定</button>
 						<button class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -392,8 +392,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="kpiDepartmentConfigProcess()" class="btn btn-primary">确定</button>
-						<button ng-click="kpiDepartmentConfigCancel()" class="btn btn-default">取消</button>
+						<button @click="kpiDepartmentConfigProcess()" class="btn btn-primary">确定</button>
+						<button @click="kpiDepartmentConfigCancel()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>

@@ -12,7 +12,7 @@
 <div class="details-content">
   <div class="container">
     <tabset>
-      <tab v-repeat="tab in tabMap" active="tab.active" heading="{{tab.label}}" id="{{tab.id}}" ng-click="tab_change('{{tab.name}}')" name="{{tab.name}}">
+      <tab v-repeat="tab in tabMap" active="tab.active" heading="{{tab.label}}" id="{{tab.id}}" @click="tab_change('{{tab.name}}')" name="{{tab.name}}">
       </tab>
     </tabset>
     <div class="row col-md-12" style="margin-top: 20px;">
@@ -23,7 +23,7 @@
         <div class="panel-body">
           <div class="row">
             <div class="span12 col-md-12">
-              <button v-repeat="bttn in buttonMap" class="btn btn-primary col-md-2" v-model="predictionModal" style="margin-left: 25px;" btn-radio="bttn.radio" ng-click="btn_click(bttn)">{{bttn.label}}</button>
+              <button v-repeat="bttn in buttonMap" class="btn btn-primary col-md-2" v-model="predictionModal" style="margin-left: 25px;" btn-radio="bttn.radio" @click="btn_click(bttn)">{{bttn.label}}</button>
             </div>
             <div class="span12 col-md-12">
               <div class="span8 col-md-8 chart-panel">

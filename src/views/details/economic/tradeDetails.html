@@ -19,7 +19,7 @@
                进出口贸易额
               <span class="glyphicon glyphicon-question-sign pull-right"></span>
             </div>
-            <span ng-show="false">{{ci = dataMap.TradeValue.lastestObject}}</span>
+            <span v-show="false">{{ci = dataMap.TradeValue.lastestObject}}</span>
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-7 chart-panel">
@@ -55,7 +55,7 @@
                   <h4></h4>
                   <div class="radio" v-repeat="studyQualityOne in studyQuality">
                     <label>
-                      <input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" ng-click="studyQualityKindChange(studyQualityOne)">
+                      <input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" @click="studyQualityKindChange(studyQualityOne)">
                             {{studyQualityOne.name}}
                         </label>
                   </div>
@@ -107,7 +107,7 @@
                   <h4></h4>
                   <div class="radio" v-repeat="schoolQualityOne in schoolQuality">
                     <label>
-                      <input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" ng-click="schoolQualityKindChange(schoolQualityOne)">
+                      <input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" @click="schoolQualityKindChange(schoolQualityOne)">
                             {{schoolQualityOne.name}}
                         </label>
                   </div>

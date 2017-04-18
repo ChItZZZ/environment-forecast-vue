@@ -26,7 +26,7 @@
 								</div>
 								<div class="col-md-5">
 									<table class="table table-hover">
-										<span ng-show="false">{{gi = dataMap.InvestData.lastestObject}}</span>
+										<span v-show="false">{{gi = dataMap.InvestData.lastestObject}}</span>
 										<caption>{{gi.year}} 年 {{gi.month}} 月全社会固定资产投资</caption>
 										<thead class="ioc-thead">
 											<tr>
@@ -64,7 +64,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="studyQualityOne in studyQuality">
 										<label>
-											<input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" ng-click="studyQualityKindChange(studyQualityOne)">
+											<input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" @click="studyQualityKindChange(studyQualityOne)">
 								            {{studyQualityOne.name}}
 								        </label>
 									</div>
@@ -116,7 +116,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="schoolQualityOne in schoolQuality">
 										<label>
-											<input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" ng-click="schoolQualityKindChange(schoolQualityOne)">
+											<input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" @click="schoolQualityKindChange(schoolQualityOne)">
 								            {{schoolQualityOne.name}}
 								        </label>
 									</div>
@@ -130,14 +130,14 @@
 					</div>
 				</div>
 			</tab>
-			<tab heading="招商引资" id="tab_eduContrib" ng-click="loadCapitalPage();">
+			<tab heading="招商引资" id="tab_eduContrib" @click="loadCapitalPage();">
 				<div class="row" style="margin-top: 20px;">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
 								引进外资(累计值)
 							<span class="glyphicon glyphicon-question-sign pull-right"></span>
 						</div>
-						<span ng-show="false">{{ci = dataMap.ImportData.lastestObject}}</span>
+						<span v-show="false">{{ci = dataMap.ImportData.lastestObject}}</span>
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-7 chart-panel">
@@ -168,7 +168,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="contribOne in contrib">
 										<label>
-											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" ng-click="contribKindChange(contribOne)">
+											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" @click="contribKindChange(contribOne)">
 								            {{contribOne.name}}
 								        </label>
 									</div>
@@ -215,7 +215,7 @@
 									<h4></h4>
 									<div class="radio" v-repeat="contribOne in contrib">
 										<label>
-											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" ng-click="contribKindChange(contribOne)">
+											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" @click="contribKindChange(contribOne)">
 								            {{contribOne.name}}
 								        </label>
 									</div>

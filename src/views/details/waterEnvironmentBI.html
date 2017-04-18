@@ -57,7 +57,7 @@
 										+ waterQualityCurrentDateTime.hour + '时'}})</h5>
 							</div>
 			                <!-- <div>
-			                    <button class="btn btn-warning" ng-click="btn_waterEnvironmentAnalysisAllList()">&nbsp点击列出超标水质监测点 <span class="badge">{{waterQualityMonitorStatusCount.fail}}</span></button>
+			                    <button class="btn btn-warning" @click="btn_waterEnvironmentAnalysisAllList()">&nbsp点击列出超标水质监测点 <span class="badge">{{waterQualityMonitorStatusCount.fail}}</span></button>
 			                </div> -->
 			                <div style="margin-top:10px;font-size:16px">
 			                    <ul class="list-group" style="overflow: auto;overflow-x:hidden;width: 300px;height:120px">
@@ -65,12 +65,12 @@
 			                            <span class="badge glyphicon glyphicon-exclamation-sign"></span>
 			                            {{waterQualityOne.monitor}}&nbsp&nbsp{{getChineseStatusView(waterQualityOne.monitor_status)}}&nbsp
 			                            <span class="glyphicon glyphicon-hand-right"></span>
-			                            <a style="cursor: pointer" ng-click="btn_waterEnvironmentAnalysisElementsList(waterQualityOne)">&nbsp分析</a>
+			                            <a style="cursor: pointer" @click="btn_waterEnvironmentAnalysisElementsList(waterQualityOne)">&nbsp分析</a>
 			                        </li>
 			                    </ul>
 			                </div>
 			                <hr>
-			                <div ng-show="tableStatus.allWaterQualityFailArr">
+			                <div v-show="tableStatus.allWaterQualityFailArr">
 								<table class="table table-hover table-responsive" style="font-size:14px;margin-bottom:0px">
 									<tr>
 										<th style="width:20%">监测点</th>
@@ -81,7 +81,7 @@
 									</tr>
 								</table>
 							</div>
-							<div style="overflow: auto;overflow-x:hidden" ng-show="tableStatus.allWaterQualityFailArr">
+							<div style="overflow: auto;overflow-x:hidden" v-show="tableStatus.allWaterQualityFailArr">
 								<table class="table table-hover table-responsive" style="font-size:14px">
 									<tr v-repeat="waterQualityOne in waterQualityMarkerList2">
 										<td style="width:20%">{{waterQualityOne.monitor}}</td>
@@ -92,7 +92,7 @@
 									</tr>
 								</table>
 							</div>
-			                <div ng-show="tableStatus.allWaterQualityArr">
+			                <div v-show="tableStatus.allWaterQualityArr">
 								<table class="table table-hover table-responsive" style="font-size:14px;margin-bottom:0px">
 									<tr>
 										<th style="width:20%">监测点</th>
@@ -103,7 +103,7 @@
 									</tr>
 								</table>
 							</div>
-							<div style="overflow: auto;overflow-x:hidden" ng-show="tableStatus.allWaterQualityArr">
+							<div style="overflow: auto;overflow-x:hidden" v-show="tableStatus.allWaterQualityArr">
 								<table class="table table-hover table-responsive" style="font-size:14px">
 									<tr v-repeat="waterQualityOne in waterQualityMarkerList">
 										<td style="width:20%">{{waterQualityOne.monitor}}</td>
@@ -114,7 +114,7 @@
 									</tr>
 								</table>
 							</div>
-			                <div ng-show="tableStatus.allWaterQualityElementsArr" style="font-size:16px">
+			                <div v-show="tableStatus.allWaterQualityElementsArr" style="font-size:16px">
 					            <div class="panel panel-primary">
 					                <div class="panel-body" id="source_analysis">
 					                    <h4>附近污染源</h4>
@@ -141,16 +141,16 @@
 												</tr>
 											</table>
 										</div>
-					                    <div><button type="button" class="btn btn-primary" ng-click="btn_waterPredictionZone()">污染源减排预测</button></div>
+					                    <div><button type="button" class="btn btn-primary" @click="btn_waterPredictionZone()">污染源减排预测</button></div>
 					                </div>
 					            </div>
 					        </div>
-					        <div><button type="button" class="btn btn-block btn-success" ng-click="btn_waterEnvironmentAllList()" ng-show="tableStatus.allWaterQualityFailArrNav" >列出所有监测点</button></div>
+					        <div><button type="button" class="btn btn-block btn-success" @click="btn_waterEnvironmentAllList()" v-show="tableStatus.allWaterQualityFailArrNav" >列出所有监测点</button></div>
 			            </div>
 			        </div>
 				</div>
 			</div>
-			<div class="panel panel-primary" ng-show="tableStatus.predictionZone">
+			<div class="panel panel-primary" v-show="tableStatus.predictionZone">
 			    <div class="panel panel-body">
 			        <div class="row">
 			            <div class="col-md-6" style="font-size:13px">
@@ -199,7 +199,7 @@
 				                <!-- <div class="col-md-3" style="border:1px solid grey;font-size:13px;line-height:30px;margin-top:80px">
 				                	<div class="radio" v-repeat="radioPredictionOne in radioPredictionList">
 				                										<label>
-				                										    <input type="radio" name="radio_prediction" value="COD" v-model="radioPredictionListSelected" ng-value="radioPredictionOne" ng-click="radioPredicitonChange(radioPredictionOne)">
+				                										    <input type="radio" name="radio_prediction" value="COD" v-model="radioPredictionListSelected" ng-value="radioPredictionOne" @click="radioPredicitonChange(radioPredictionOne)">
 				                										    {{radioPredictionOne}}
 				                										</label>
 				                									</div>
@@ -214,10 +214,10 @@
 			                <div class="col-md-12">
 			                    <h4>污染源企业设定：</h4>
 			                    <div class="col-md-3" style="margin-top: 15px">
-			                        <button class="btn btn-sm btn-success" ng-click="button_recommend()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp模型设计</button>
+			                        <button class="btn btn-sm btn-success" @click="button_recommend()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp模型设计</button>
 			                    </div>
 			                    <div class="col-md-3"  style="margin-top: 15px">
-			                        <button class="btn btn-sm btn-success" ng-click="source_predict()"><span class="glyphicon glyphicon-play"></span>&nbsp模型验证</button>
+			                        <button class="btn btn-sm btn-success" @click="source_predict()"><span class="glyphicon glyphicon-play"></span>&nbsp模型验证</button>
 			                    </div>
 			                </div>
 		                    <div class="col-md-12">
@@ -294,7 +294,7 @@
 			            	</div>
 			            	<div class="col-md-12" style="margin-top:15px">
 			            		<div class="col-md-offset-9 col-md-3">
-			            			<button class="btn btn-sm btn-primary btn-block" ng-click="button_reset()">复位</button>
+			            			<button class="btn btn-sm btn-primary btn-block" @click="button_reset()">复位</button>
 			            		</div>
 			            		
 		                    </div>
@@ -304,7 +304,7 @@
 		            		<div class="col-md-12">
 		            			<h4>污水处理费预估(根据废水排放方案确定)：</h4>
 			                    <div class="col-md-3" style="margin-top: 15px">
-			                        <button class="btn btn-sm btn-success" ng-click="feed_calculate()"><span class="glyphicon glyphicon-hand-right"></span>处理费估算</button>
+			                        <button class="btn btn-sm btn-success" @click="feed_calculate()"><span class="glyphicon glyphicon-hand-right"></span>处理费估算</button>
 			                    </div>
 			                    <div class="col-md-9"  style="margin-top: 15px">
 			                        <h4>总处理费用预估为{{feed_sum}}元</h4>

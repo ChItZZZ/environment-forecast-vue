@@ -43,7 +43,7 @@
                     <div class="panel panel-primary">
                         <div style="min-height:610px;">
                             <div class="" style="padding: 15px; padding-left: 5px;" ioc-btn-group>
-                                <button ioc-btn class="btn btn-xs {{category.status | categoryStatus}}" style="margin-right:5px;" v-repeat="category in domain.data | orderBy:'sortOrder'" ng-click="selectCategory(domain, category)" >{{category.name}}</button>
+                                <button ioc-btn class="btn btn-xs {{category.status | categoryStatus}}" style="margin-right:5px;" v-repeat="category in domain.data | orderBy:'sortOrder'" @click="selectCategory(domain, category)" >{{category.name}}</button>
                             </div>
                             <table class="table table-bordered kpi-table">
                                 <thead class="ioc-thead">

@@ -14,7 +14,7 @@
 <div class="details-content">
   <div class="container">
     <tabset>
-      <tab v-repeat="tab in tabMap" active="tab.active" heading="{{tab.label}}" id="{{tab.id}}" ng-click="tabChangeFunction('{{tab.name}}')" name="{{tab.name}}">
+      <tab v-repeat="tab in tabMap" active="tab.active" heading="{{tab.label}}" id="{{tab.id}}" @click="tabChangeFunction('{{tab.name}}')" name="{{tab.name}}">
       </tab>
     </tabset>
     <div class="row col-md-12" style="margin-top: 20px;">

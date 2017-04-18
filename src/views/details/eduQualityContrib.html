@@ -36,7 +36,7 @@
 									<h4>学业质量类别选择</h4>
 									<div class="radio" v-repeat="studyQualityOne in studyQuality">
 										<label>
-											<input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" ng-click="studyQualityKindChange(studyQualityOne)">
+											<input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" @click="studyQualityKindChange(studyQualityOne)">
 								            <font size="3">{{studyQualityOne.name}}</font>
 								        </label>
 									</div>
@@ -72,7 +72,7 @@
 									<h4>学校质量类别选择</h4>
 									<div class="radio" v-repeat="schoolQualityOne in schoolQuality">
 										<label>
-											<input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" ng-click="schoolQualityKindChange(schoolQualityOne)">
+											<input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" @click="schoolQualityKindChange(schoolQualityOne)">
 								            <font size="3">{{schoolQualityOne.name}}</font>
 								        </label>
 									</div>
@@ -108,7 +108,7 @@
 									<h4>教学成果类别选择</h4>
 									<div class="radio" v-repeat="enrollOne in enroll">
 										<label>
-											<input type="radio" v-model="eduEnrollKindSelected" ng-value="enrollOne.name" name="enrollLastYearList" ng-click="enrollKindChange(enrollOne)">
+											<input type="radio" v-model="eduEnrollKindSelected" ng-value="enrollOne.name" name="enrollLastYearList" @click="enrollKindChange(enrollOne)">
 								            <font size="3">{{enrollOne.name}}</font>
 								        </label>
 									</div>
@@ -160,7 +160,7 @@
 									<h4>教育贡献类别选择</h4>
 									<div class="radio" v-repeat="contribOne in contrib">
 										<label>
-											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" ng-click="contribKindChange(contribOne)">
+											<input type="radio" v-model="eduContribKindSelected" ng-value="contribOne.name" name="contrib" @click="contribKindChange(contribOne)">
 								            <font size="3">{{contribOne.name}}</font>
 								        </label>
 									</div>

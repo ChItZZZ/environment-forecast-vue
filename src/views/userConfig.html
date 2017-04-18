@@ -19,7 +19,7 @@
 				<tab heading="用户管理">
 					<div class="panel-body" style="padding:10px 0px">
 						<div style="text-align:right;margin:10px">
-							<button  class="btn btn-primary" ng-click="userAdd()">添加用户</button>
+							<button  class="btn btn-primary" @click="userAdd()">添加用户</button>
 						</div>
 						<table class="table table-bordered" style="margin-bottom:0px">
 							<thead class="ioc-thead ">
@@ -66,11 +66,11 @@
 												<h5>{{user.name}}</h5>
 											</td>
 											<td>
-												<button  class="btn btn-primary" ng-click="userQuery(user)">查看</button>
-												<button  class="btn btn-primary" ng-click="userModify(user)">修改</button>
-												<button  class="btn btn-primary" ng-click="userDelConfirmPre(user)">删除</button>
-												<button  class="btn btn-primary" ng-click="userIdResetPassword(user)">密码重置</button>
-												<button  class="btn btn-primary" ng-click="userDepartmentConfig(user)">用户组配置</button>
+												<button  class="btn btn-primary" @click="userQuery(user)">查看</button>
+												<button  class="btn btn-primary" @click="userModify(user)">修改</button>
+												<button  class="btn btn-primary" @click="userDelConfirmPre(user)">删除</button>
+												<button  class="btn btn-primary" @click="userIdResetPassword(user)">密码重置</button>
+												<button  class="btn btn-primary" @click="userDepartmentConfig(user)">用户组配置</button>
 											</td>
 										</tr>
 									</tbody>
@@ -83,7 +83,7 @@
 				<tab heading="组管理">
 					<div class="panel-body"  style="padding:10px 0px">
 						<div style="text-align:right;margin: 10px">
-							<button  class="btn btn-primary" ng-click="departmentAdd()">添加组</button>
+							<button  class="btn btn-primary" @click="departmentAdd()">添加组</button>
 						</div>
 						<table class="table table-bordered" style="margin-bottom:0px">
 							<thead class="ioc-thead ">
@@ -127,9 +127,9 @@
 												<h5>{{formatDateTime(department.modify_time)}}</h5>
 											</td>
 											<td>
-												<button  class="btn btn-primary" ng-click="departmentQuery(department)">查看</button>
-												<button  class="btn btn-primary" ng-click="departmentModify(department)">修改</button>
-												<button  class="btn btn-primary" ng-click="departmentDelConfirmPre(department)">删除</button>
+												<button  class="btn btn-primary" @click="departmentQuery(department)">查看</button>
+												<button  class="btn btn-primary" @click="departmentModify(department)">修改</button>
+												<button  class="btn btn-primary" @click="departmentDelConfirmPre(department)">删除</button>
 											</td>
 										</tr>
 									</tbody>
@@ -206,7 +206,7 @@
 
 				<div>
 					<div class="modal-footer">
-						<button ng-click="userAddConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="userAddForm.$invalid">确定</button>
+						<button @click="userAddConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="userAddForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -359,7 +359,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button ng-click="userModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="userModifyForm.$invalid">确定</button>
+						<button @click="userModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="userModifyForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -376,8 +376,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="userAddProcess()" class="btn btn-primary">确定</button>
-						<button ng-click="userAddCancel()" class="btn btn-default">取消</button>
+						<button @click="userAddProcess()" class="btn btn-primary">确定</button>
+						<button @click="userAddCancel()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -393,8 +393,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="userModifyProcess()" class="btn btn-primary">确定</button>
-						<button ng-click="userModifyCancel()" class="btn btn-default">取消</button>
+						<button @click="userModifyProcess()" class="btn btn-primary">确定</button>
+						<button @click="userModifyCancel()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -410,7 +410,7 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="userDelProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
+						<button @click="userDelProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -452,7 +452,7 @@
 						</div>	
 				<div>
 				<div class="modal-footer">
-					<button ng-click="userDepartmentConfigConfirmPre()" class="btn btn-primary" ng-disabled="userDepartmentForm.$invalid">确定</button>
+					<button @click="userDepartmentConfigConfirmPre()" class="btn btn-primary" ng-disabled="userDepartmentForm.$invalid">确定</button>
 					<button class="btn btn-default" data-dismiss="modal">取消</button>
 				</div></div>
 			</div>
@@ -468,8 +468,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="userDepartmentConfigProcess()" class="btn btn-primary">确定</button>
-						<button ng-click="userDepartmentConfigCancel()" class="btn btn-default">取消</button>
+						<button @click="userDepartmentConfigProcess()" class="btn btn-primary">确定</button>
+						<button @click="userDepartmentConfigCancel()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -498,7 +498,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button ng-click="departmentAddConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="departmentAddForm.$invalid">确定</button>
+						<button @click="departmentAddConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="departmentAddForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -560,7 +560,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button ng-click="departmentModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="departmentModifyForm.$invalid">确定</button>
+						<button @click="departmentModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="departmentModifyForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -577,8 +577,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="departmentAddProcess()" class="btn btn-primary">确定</button>
-						<button ng-click="departmentAddCancel()" class="btn btn-default">取消</button>
+						<button @click="departmentAddProcess()" class="btn btn-primary">确定</button>
+						<button @click="departmentAddCancel()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -594,8 +594,8 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="departmentModifyProcess()" class="btn btn-primary">确定</button>
-						<button ng-click="departmentModifyCancel()" class="btn btn-default">取消</button>
+						<button @click="departmentModifyProcess()" class="btn btn-primary">确定</button>
+						<button @click="departmentModifyCancel()" class="btn btn-default">取消</button>
 					</div>
 				</div>
 			</div>
@@ -611,7 +611,7 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="departmentDelProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
+						<button @click="departmentDelProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -636,7 +636,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button ng-click="userIdResetPasswordPre()" type="submit" class="btn btn-primary" ng-disabled="userResetIdPasswordForm.$invalid">确定</button>
+						<button @click="userIdResetPasswordPre()" type="submit" class="btn btn-primary" ng-disabled="userResetIdPasswordForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -653,7 +653,7 @@
 	
 				<div>
 					<div class="modal-footer">
-						<button ng-click="userIdResetPasswordProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
+						<button @click="userIdResetPasswordProcess()" class="btn btn-primary" data-dismiss="modal">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
