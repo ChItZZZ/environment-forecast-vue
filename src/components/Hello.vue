@@ -1,7 +1,9 @@
 <template>
-    <div class="hello">
+    <div class="hello" :class="item | toUp">
         <h1>{{ msg }}</h1>
         <h2>Essential Links</h2>
+
+        <h3>{{item | toUp}}</h3>
     </div>
 </template>
 
@@ -11,7 +13,12 @@
         data () {
             return {
                 msg: 'Welcome to Your Vue.js App',
-                item: '123'
+                item: 'asdasd'
+            }
+        },
+        filters:{
+            toUp:function (v) {
+                return v.toUpperCase();
             }
         }
     }
