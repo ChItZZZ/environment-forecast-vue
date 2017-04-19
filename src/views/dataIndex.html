@@ -45,7 +45,7 @@
                 </li>
               </ul>
               <ul class="nav sidenav storage-data-list" style="overflow-y:auto">
-                <li class="cla-item" ng-class="{'active': $state.params.table == tableItem.table.name}" v-repeat="tableItem in tableList | filter:searchText">
+                <li class="cla-item" :class="{'active': $state.params.table == tableItem.table.name}" v-repeat="tableItem in tableList | filter:searchText">
                   <a href="#/data?table={{tableItem.table.name}}">
                     <span class="cla-name">{{tableItem.table.description}}</span>
                   </a>

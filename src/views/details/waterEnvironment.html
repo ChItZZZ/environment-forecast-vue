@@ -33,21 +33,21 @@
 							<div class="panel-body"  style="height: 650px">
 								<h4>水质</h4>
 								<div style="margin-top:5px;font-size:16px"	>
-									<button class="btn" ng-class="getButtonStatus(waterQualityStatus.status)" @click="waterQualityBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp江河水质情况</button>
+									<button class="btn" :class="getButtonStatus(waterQualityStatus.status)" @click="waterQualityBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp江河水质情况</button>
 									{{waterQualityStatus.sentence}}
 								</div>
 								<hr />
 								<h4>水情</h4>
 
 								<div style="margin-top:5px;font-size:16px">
-									<button class="btn" @click="waterConditionBtn()" ng-class="getButtonStatus(waterConditionStatus.status)"><span class="glyphicon glyphicon-hand-right"></span>&nbsp江河水情情况</button>
+									<button class="btn" @click="waterConditionBtn()" :class="getButtonStatus(waterConditionStatus.status)"><span class="glyphicon glyphicon-hand-right"></span>&nbsp江河水情情况</button>
 									{{waterConditionStatus.sentence}}
 								</div>
 								<hr />
 								<h4>废水排放</h4>
 
 								<div style="margin-top:5px;font-size:16px">
-									<button class="btn" @click="wasteWaterBtn()" ng-class="getButtonStatus(wasteWaterStatus.status)"><span class="glyphicon glyphicon-hand-right"></span>&nbsp工业废水排放</button>
+									<button class="btn" @click="wasteWaterBtn()" :class="getButtonStatus(wasteWaterStatus.status)"><span class="glyphicon glyphicon-hand-right"></span>&nbsp工业废水排放</button>
 									{{wasteWaterStatus.sentence}}
 								</div>
 								<hr>
@@ -202,23 +202,23 @@
 												<h5>{{waterQualityCurrentDateTime.year}}年{{waterQualityCurrentDateTime.month}}月{{waterQualityCurrentDateTime.day}}日{{waterQualityCurrentDateTime.hour}}时</h5>
 												<h5>{{waterQualityOneSentence.monitor}}</h5>
 												<h5>
-													<span class="glyphicon" ng-class="getOneSentenceStatus(waterQualityOneSentence.o2Status.status)"></span>
+													<span class="glyphicon" :class="getOneSentenceStatus(waterQualityOneSentence.o2Status.status)"></span>
 													&nbsp{{waterQualityOneSentence.o2Status.sentence}}
 												</h5>
 												<h5>
-													<span class="glyphicon" ng-class="getOneSentenceStatus(waterQualityOneSentence.kmno4Status.status)"></span>
+													<span class="glyphicon" :class="getOneSentenceStatus(waterQualityOneSentence.kmno4Status.status)"></span>
 													&nbsp{{waterQualityOneSentence.kmno4Status.sentence}}
 												</h5>
 												<h5>
-													<span class="glyphicon" ng-class="getOneSentenceStatus(waterQualityOneSentence.nh4nStatus.status)"></span>
+													<span class="glyphicon" :class="getOneSentenceStatus(waterQualityOneSentence.nh4nStatus.status)"></span>
 													&nbsp{{waterQualityOneSentence.nh4nStatus.sentence}}
 												</h5>
 												<h5>
-													<span class="glyphicon" ng-class="getOneSentenceStatus(waterQualityOneSentence.pStatus.status)"></span>
+													<span class="glyphicon" :class="getOneSentenceStatus(waterQualityOneSentence.pStatus.status)"></span>
 													&nbsp{{waterQualityOneSentence.pStatus.sentence}}
 												</h5>
 												<h5>
-													<span class="glyphicon" ng-class="getOneSentenceStatus(waterQualityOneSentence.tnStatus.status)"></span>
+													<span class="glyphicon" :class="getOneSentenceStatus(waterQualityOneSentence.tnStatus.status)"></span>
 													&nbsp{{waterQualityOneSentence.tnStatus.sentence}}
 												</h5>
 											</p>
@@ -316,11 +316,11 @@
 												<h5>{{waterConditionCurrentDateTime.year}}年{{waterConditionCurrentDateTime.month}}月{{waterConditionCurrentDateTime.day}}日{{waterConditionCurrentDateTime.hour}}时</h5>
 												<h5>{{waterConditionOneSentence.monitor}}</h5>
 												<h5>
-													<span class="glyphicon" ng-class="getOneSentenceStatus(waterConditionOneSentence.flowStatus.status)"></span>
+													<span class="glyphicon" :class="getOneSentenceStatus(waterConditionOneSentence.flowStatus.status)"></span>
 													&nbsp{{waterConditionOneSentence.flowStatus.sentence}}
 												</h5>
 												<h5>
-													<span class="glyphicon" ng-class="getOneSentenceStatus(waterConditionOneSentence.levelStatus.status)"></span>
+													<span class="glyphicon" :class="getOneSentenceStatus(waterConditionOneSentence.levelStatus.status)"></span>
 													&nbsp{{waterConditionOneSentence.levelStatus.sentence}}
 												</h5>
 											</p>

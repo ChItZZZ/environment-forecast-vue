@@ -185,10 +185,10 @@
 			                        </tr>
 			                        <tr>
 			                            <td>状态</td>
-			                            <td><span ng-class="getLabelCss(getStatusDesc(waterQualityAnalysisMarker.index_o2,waterQualityO2Scan.scan,'溶解氧').status)">{{getChineseStatusView(getStatusDesc(waterQualityAnalysisMarker.index_o2,waterQualityO2Scan.scan,'溶解氧').status)}}</span></td>
-			                            <td><span ng-class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)}}</span></td>
-			                            <td><span ng-class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)}}</span></td>
-			                            <td><span ng-class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_p,waterQualityPScan.scan,'总磷').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_p,waterQualityPScan.scan,'总磷').status)}}</span></td>
+			                            <td><span :class="getLabelCss(getStatusDesc(waterQualityAnalysisMarker.index_o2,waterQualityO2Scan.scan,'溶解氧').status)">{{getChineseStatusView(getStatusDesc(waterQualityAnalysisMarker.index_o2,waterQualityO2Scan.scan,'溶解氧').status)}}</span></td>
+			                            <td><span :class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)}}</span></td>
+			                            <td><span :class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)}}</span></td>
+			                            <td><span :class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_p,waterQualityPScan.scan,'总磷').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_p,waterQualityPScan.scan,'总磷').status)}}</span></td>
 			                        </tr>
 			                    </table>
 			                </div>
@@ -376,14 +376,14 @@
 		                        </tr>
 		                        <tr>
 		                            <td>状态</td>
-		                            <td><span ng-class="getLabelCss(getStatusDesc(waterQualityAnalysisMarker.index_o2,waterQualityO2Scan.scan,'溶解氧').status)">{{getChineseStatusView(getStatusDesc(waterQualityAnalysisMarker.index_o2,waterQualityO2Scan.scan,'溶解氧').status)}}</span></td> 
-		                            <td><span ng-class="getLabelCss(getStatusDesc(predict_waterquality.index_o2,waterQualityO2Scan.scan,'溶解氧').status)">{{getChineseStatusView(getStatusDesc(predict_waterquality.index_o2,waterQualityO2Scan.scan,'溶解氧').status)}}</span></td>
-		                            <td><span ng-class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)}}</span></td>
-		                            <td><span ng-class="getLabelCss(getStatusAsc(predict_waterquality.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)">{{getChineseStatusView(getStatusAsc(predict_waterquality.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)}}</span></td>
-		                            <td><span ng-class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)}}</span></td>
-		                            <td><span ng-class="getLabelCss(getStatusAsc(predict_waterquality.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)">{{getChineseStatusView(getStatusAsc(predict_waterquality.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)}}</span></td>
-		                            <td><span ng-class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_p,waterQualityPScan.scan,'总磷').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_p,waterQualityPScan.scan,'总磷').status)}}</span></td>
-		                            <td><span ng-class="getLabelCss(getStatusAsc(predict_waterquality.index_p,waterQualityPScan.scan,'总磷').status)">{{getChineseStatusView(getStatusAsc(predict_waterquality.index_p,waterQualityPScan.scan,'总磷').status)}}</span></td>
+		                            <td><span :class="getLabelCss(getStatusDesc(waterQualityAnalysisMarker.index_o2,waterQualityO2Scan.scan,'溶解氧').status)">{{getChineseStatusView(getStatusDesc(waterQualityAnalysisMarker.index_o2,waterQualityO2Scan.scan,'溶解氧').status)}}</span></td>
+		                            <td><span :class="getLabelCss(getStatusDesc(predict_waterquality.index_o2,waterQualityO2Scan.scan,'溶解氧').status)">{{getChineseStatusView(getStatusDesc(predict_waterquality.index_o2,waterQualityO2Scan.scan,'溶解氧').status)}}</span></td>
+		                            <td><span :class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)}}</span></td>
+		                            <td><span :class="getLabelCss(getStatusAsc(predict_waterquality.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)">{{getChineseStatusView(getStatusAsc(predict_waterquality.index_kmno4,waterQualityKmno4Scan.scan,'高锰酸钾').status)}}</span></td>
+		                            <td><span :class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)}}</span></td>
+		                            <td><span :class="getLabelCss(getStatusAsc(predict_waterquality.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)">{{getChineseStatusView(getStatusAsc(predict_waterquality.index_nh4n,waterQualityNh4nScan.scan,'氨氮').status)}}</span></td>
+		                            <td><span :class="getLabelCss(getStatusAsc(waterQualityAnalysisMarker.index_p,waterQualityPScan.scan,'总磷').status)">{{getChineseStatusView(getStatusAsc(waterQualityAnalysisMarker.index_p,waterQualityPScan.scan,'总磷').status)}}</span></td>
+		                            <td><span :class="getLabelCss(getStatusAsc(predict_waterquality.index_p,waterQualityPScan.scan,'总磷').status)">{{getChineseStatusView(getStatusAsc(predict_waterquality.index_p,waterQualityPScan.scan,'总磷').status)}}</span></td>
 		                        </tr>
 		                    </table>
 		                </div>

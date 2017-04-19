@@ -33,21 +33,21 @@
                                 <h4>空气质量</h4>
 
                                 <div style="margin-top:5px;font-size:16px">
-                                    <button class="btn" ng-class="getButtonStatus(airQualityStatus.status)" @click="airQualityBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp城区空气质量</button>
+                                    <button class="btn" :class="getButtonStatus(airQualityStatus.status)" @click="airQualityBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp城区空气质量</button>
                                     {{airQualityStatus.sentence}}
                                 </div>
                                 <hr/>
                                <!--  <h4>气象因素</h4>
 
                                 <div style="margin-top:5px;font-size:16px">
-                                    <button class="btn" ng-class="getButtonStatus(airConditionStatus.status)" @click="airConditionBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp全市气象状况</button>
+                                    <button class="btn" :class="getButtonStatus(airConditionStatus.status)" @click="airConditionBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp全市气象状况</button>
                                     {{airConditionStatus.sentence}}
                                 </div>
                                 <hr/> -->
                                 <h4>废气排放</h4>
 
                                 <div style="margin-top:5px;font-size:16px">
-                                    <button class="btn" ng-class="getButtonStatus(wasteAirStatus.status)" @click="wasteAirBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp工业废气排放</button>
+                                    <button class="btn" :class="getButtonStatus(wasteAirStatus.status)" @click="wasteAirBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp工业废气排放</button>
                                     {{wasteAirStatus.sentence}}
                                 </div>
                                 <hr>
@@ -238,31 +238,31 @@
                                                 <h5>空气质量等级:&nbsp{{airQualityOneSentence.level}} 级</h5>
                                                 <h5>首要污染物:&nbsp{{airQualityOneSentence.firstElement}}</h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airQualityOneSentence.aqiStatus.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airQualityOneSentence.aqiStatus.status)"></span>
                                                     &nbsp{{airQualityOneSentence.aqiStatus.sentence}}
                                                 </h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airQualityOneSentence.pm25Status.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airQualityOneSentence.pm25Status.status)"></span>
                                                     &nbsp{{airQualityOneSentence.pm25Status.sentence}}
                                                 </h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airQualityOneSentence.pm10Status.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airQualityOneSentence.pm10Status.status)"></span>
                                                     &nbsp{{airQualityOneSentence.pm10Status.sentence}}
                                                 </h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airQualityOneSentence.so2Status.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airQualityOneSentence.so2Status.status)"></span>
                                                     &nbsp{{airQualityOneSentence.so2Status.sentence}}
                                                 </h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airQualityOneSentence.no2Status.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airQualityOneSentence.no2Status.status)"></span>
                                                     &nbsp{{airQualityOneSentence.no2Status.sentence}}
                                                 </h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airQualityOneSentence.coStatus.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airQualityOneSentence.coStatus.status)"></span>
                                                     &nbsp{{airQualityOneSentence.coStatus.sentence}}
                                                 </h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airQualityOneSentence.o3Status.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airQualityOneSentence.o3Status.status)"></span>
                                                     &nbsp{{airQualityOneSentence.o3Status.sentence}}
                                                 </h5>
                                             </p>
@@ -361,15 +361,15 @@
                                                 <h5>{{airConditionCurrentDateTime.year}}年{{airConditionCurrentDateTime.month}}月{{airConditionCurrentDateTime.day}}日{{airConditionCurrentDateTime.hour}}时</h5>
                                                 <h5>{{airConditionOneSentence.monitor}}</h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airConditionOneSentence.index_temperature.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airConditionOneSentence.index_temperature.status)"></span>
                                                     &nbsp{{airConditionOneSentence.index_temperature.sentence}}
                                                 </h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airConditionOneSentence.index_windLevel.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airConditionOneSentence.index_windLevel.status)"></span>
                                                     &nbsp{{airConditionOneSentence.index_windLevel.sentence}}
                                                 </h5>
                                                 <h5>
-                                                    <span class="glyphicon" ng-class="getOneSentenceStatus(airConditionOneSentence.index_humidity.status)"></span>
+                                                    <span class="glyphicon" :class="getOneSentenceStatus(airConditionOneSentence.index_humidity.status)"></span>
                                                     &nbsp{{airConditionOneSentence.index_humidity.sentence}}
                                                 </h5>
                                             </p>

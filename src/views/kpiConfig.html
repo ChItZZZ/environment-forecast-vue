@@ -219,7 +219,7 @@
 						    <div class="col-sm-12" align="center">
 						    	<div class="form-inline " style="margin-top:10px" v-repeat="kpiScope in kpiScopeTemp.kpiScopeArr">
 						    		<div class="col-sm-12">
-						    		<label class="label status" ng-class="getLabelClass(kpiScope.kpiStatus)">{{getChineseStatus(kpiScope.kpiStatus)}}</label>
+						    		<label class="label status" :class="getLabelClass(kpiScope.kpiStatus)">{{getChineseStatus(kpiScope.kpiStatus)}}</label>
 						    		&nbsp&nbsp&nbsp&nbsp
 						    		<input type="text" class="form-control" style="width:80px" v-model="kpiScope.data1">
 						    		<select class="form-control" style="-moz-appearance: none;-webkit-appearance: none;appearance: none;" v-model="kpiScope.operator1">
