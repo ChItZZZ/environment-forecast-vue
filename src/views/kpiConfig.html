@@ -157,7 +157,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button @click="kpiModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="kpiModifyForm.$invalid">确定</button>
+						<button @click="kpiModifyConfirmPre()" type="submit" class="btn btn-primary" :disabled="kpiModifyForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -249,7 +249,7 @@
 				
 				<div>
 					<div class="modal-footer">
-						<button @click="kpiScopeConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="kpiScopeForm.$invalid">确定</button>
+						<button @click="kpiScopeConfirmPre()" type="submit" class="btn btn-primary" :disabled="kpiScopeForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -375,7 +375,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button @click="kpiDepartmentConfigConfirmPre()" class="btn btn-primary" ng-disabled="kpiDepartmentForm.$invalid">确定</button>
+						<button @click="kpiDepartmentConfigConfirmPre()" class="btn btn-primary" :disabled="kpiDepartmentForm.$invalid">确定</button>
 						<button class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>

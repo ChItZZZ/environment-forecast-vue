@@ -74,7 +74,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-default ng-scope" @click="addDataPre()" ng-disabled="addDataForm.$invalid&&(addDataTempDate.date!='')">添加</button>
+          <button class="btn btn-default ng-scope" @click="addDataPre()" :disabled="addDataForm.$invalid&&(addDataTempDate.date!='')">添加</button>
           <button class="btn btn-default ng-scope" data-dismiss="modal">关闭</button>
         </div>
       </div>
@@ -122,19 +122,19 @@
                 <select class="form-control" v-model="updateDataTemp[column.name]" ng-options="getBooleanChinese(bolleanOne) for bolleanOne in booelanArr" required></select>
               </div>
               <div class="col-sm-8" v-if="column.type == 'ddouble'">
-                <input v-model="updateDataTemp[column.name]" class="form-control" type="text" ng-disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
+                <input v-model="updateDataTemp[column.name]" class="form-control" type="text" :disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
               <div class="col-sm-8" v-if="column.type == 'sstring'">
-                <input v-model="updateDataTemp[column.name]" class="form-control" type="text" ng-disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
+                <input v-model="updateDataTemp[column.name]" class="form-control" type="text" :disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
               <div class="col-sm-8" v-if="column.type == 'iint'">
-                <input v-model="updateDataTemp[column.name]" class="form-control" type="text" ng-disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
+                <input v-model="updateDataTemp[column.name]" class="form-control" type="text" :disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
               <div class="col-sm-8" v-if="column.type == 'emum'">
-                <input v-model="updateDataTemp[column.name]" class="form-control" type="text" ng-disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
+                <input v-model="updateDataTemp[column.name]" class="form-control" type="text" :disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
 
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-default ng-scope" @click="updateDataPre()"  ng-disabled="updateDataForm.$invalid">更新</button>
+          <button class="btn btn-default ng-scope" @click="updateDataPre()"  :disabled="updateDataForm.$invalid">更新</button>
           <button class="btn btn-default ng-scope" data-dismiss="modal">关闭</button>
         </div>
       </div>
@@ -225,7 +225,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-default ng-scope" @click="queryDataProcess()"  ng-disabled="queryDataForm.$invalid">查询</button>
+          <button class="btn btn-default ng-scope" @click="queryDataProcess()"  :disabled="queryDataForm.$invalid">查询</button>
           <button class="btn btn-default ng-scope" data-dismiss="modal">关闭</button>
         </div>
       </div>
@@ -250,7 +250,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-default ng-scope" @click="addBatchDataPre()" ng-disabled="addBatchDataForm.$invalid">导入</button>
+          <button class="btn btn-default ng-scope" @click="addBatchDataPre()" :disabled="addBatchDataForm.$invalid">导入</button>
           <button class="btn btn-default ng-scope" data-dismiss="modal">关闭</button>
         </div>
       </div>

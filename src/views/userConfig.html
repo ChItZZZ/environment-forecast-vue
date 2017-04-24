@@ -206,7 +206,7 @@
 
 				<div>
 					<div class="modal-footer">
-						<button @click="userAddConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="userAddForm.$invalid">确定</button>
+						<button @click="userAddConfirmPre()" type="submit" class="btn btn-primary" :disabled="userAddForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -359,7 +359,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button @click="userModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="userModifyForm.$invalid">确定</button>
+						<button @click="userModifyConfirmPre()" type="submit" class="btn btn-primary" :disabled="userModifyForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -452,7 +452,7 @@
 						</div>	
 				<div>
 				<div class="modal-footer">
-					<button @click="userDepartmentConfigConfirmPre()" class="btn btn-primary" ng-disabled="userDepartmentForm.$invalid">确定</button>
+					<button @click="userDepartmentConfigConfirmPre()" class="btn btn-primary" :disabled="userDepartmentForm.$invalid">确定</button>
 					<button class="btn btn-default" data-dismiss="modal">取消</button>
 				</div></div>
 			</div>
@@ -498,7 +498,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button @click="departmentAddConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="departmentAddForm.$invalid">确定</button>
+						<button @click="departmentAddConfirmPre()" type="submit" class="btn btn-primary" :disabled="departmentAddForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -560,7 +560,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button @click="departmentModifyConfirmPre()" type="submit" class="btn btn-primary" ng-disabled="departmentModifyForm.$invalid">确定</button>
+						<button @click="departmentModifyConfirmPre()" type="submit" class="btn btn-primary" :disabled="departmentModifyForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
@@ -636,7 +636,7 @@
 				</div>
 				<div>
 					<div class="modal-footer">
-						<button @click="userIdResetPasswordPre()" type="submit" class="btn btn-primary" ng-disabled="userResetIdPasswordForm.$invalid">确定</button>
+						<button @click="userIdResetPasswordPre()" type="submit" class="btn btn-primary" :disabled="userResetIdPasswordForm.$invalid">确定</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
