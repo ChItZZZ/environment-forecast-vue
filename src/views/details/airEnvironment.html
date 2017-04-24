@@ -37,13 +37,6 @@
                                     {{airQualityStatus.sentence}}
                                 </div>
                                 <hr/>
-                               <!--  <h4>气象因素</h4>
-
-                                <div style="margin-top:5px;font-size:16px">
-                                    <button class="btn" :class="getButtonStatus(airConditionStatus.status)" @click="airConditionBtn()"><span class="glyphicon glyphicon-hand-right"></span>&nbsp全市气象状况</button>
-                                    {{airConditionStatus.sentence}}
-                                </div>
-                                <hr/> -->
                                 <h4>废气排放</h4>
 
                                 <div style="margin-top:5px;font-size:16px">
@@ -81,32 +74,6 @@
                                     </table>
 
                                 </div>
-                                <!-- <div v-show="mapTableStatus.airCondition">
-                                    <h5 align="right" style="padding-top: 0px">(更新时间:&nbsp{{airConditionCurrentDateTime.year + '-'
-                                        + airConditionCurrentDateTime.month + '-'
-                                        + airConditionCurrentDateTime.day + ' '
-                                        + airConditionCurrentDateTime.hour + '时'}})</h5>
-                                    <table class="table table-hover table-responsive" style="font-size:14px;margin-bottom:0px">
-                                        <tr>
-                                            <th style="width:20%">监测点</th>
-                                            <th style="width:20%">气温(℃)</th>
-                                            <th style="width:30%">相对湿度(%)</th>
-                                            <th style="width:15%">风级</th>
-                                            <th style="width:15%">风向</th>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div style="overflow: scroll;overflow-x:hidden;height:340px" v-show="mapTableStatus.airCondition">
-                                    <table class="table table-hover table-responsive" style="font-size:14px">
-                                        <tr v-repeat="airConditionOne in airConditionMarkerList">
-                                            <td style="width:20%">{{airConditionOne.monitor}}</td>
-                                            <td style="width:20%"><span>{{airConditionOne.index_temperature}}</span></td>
-                                            <td style="width:30%"><span>{{airConditionOne.index_humidity}}</span></td>
-                                            <td style="width:15%"><span>{{airConditionOne.index_windLevel}}</span></td>
-                                            <td style="width:15%"><span>{{airConditionOne.index_windDire}}</span></td>
-                                        </tr>
-                                    </table>
-                                </div> -->
                                 <div v-show="mapTableStatus.wasteAir">
                                     <h5 align="right" style="padding-top: 0px">(更新时间:&nbsp{{wasteAirCurrentDateTime.year + '-'
                                         + wasteAirCurrentDateTime.month + '-'
@@ -335,49 +302,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="panel panel-primary" style="margin-top: 20px;">
-                            <div class="panel-heading">
-                                气象信息分析 <span
-                                    class="glyphicon glyphicon-question-sign pull-right"></span>
-                            </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-9 chart-panel">
-                                        <highchart class="col-md-12" style="width: 550px;height:400px" config="airConditionOptions.airConditionCurrentOption">气象因素</highchart>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h4>气象指标选择</h4>
-                                        <div style="font-size:14px;">
-                                            <div class="radio" v-repeat="airConditionOne in airConditionCurrentList"><label>
-                                                <input type="radio" v-model="airConditionCurrentListSelected" ng-value="airConditionOne" name="airConditionCurrentListRadio" @click="airConditionCurrentChange(airConditionOne)">{{airConditionOne}}
-                                            </label></div>
-                                        </div>
-                                        <hr>
-                                        <div class="ioc-panel-desc">
-                                            <p class="ioc-panel-desc-title">
-                                                <img src="/images/common/titles/one-sentence.png" />
-                                            </p>
-                                            <p class="ioc-panel-desc-body">
-                                                <h5>{{airConditionCurrentDateTime.year}}年{{airConditionCurrentDateTime.month}}月{{airConditionCurrentDateTime.day}}日{{airConditionCurrentDateTime.hour}}时</h5>
-                                                <h5>{{airConditionOneSentence.monitor}}</h5>
-                                                <h5>
-                                                    <span class="glyphicon" :class="getOneSentenceStatus(airConditionOneSentence.index_temperature.status)"></span>
-                                                    &nbsp{{airConditionOneSentence.index_temperature.sentence}}
-                                                </h5>
-                                                <h5>
-                                                    <span class="glyphicon" :class="getOneSentenceStatus(airConditionOneSentence.index_windLevel.status)"></span>
-                                                    &nbsp{{airConditionOneSentence.index_windLevel.sentence}}
-                                                </h5>
-                                                <h5>
-                                                    <span class="glyphicon" :class="getOneSentenceStatus(airConditionOneSentence.index_humidity.status)"></span>
-                                                    &nbsp{{airConditionOneSentence.index_humidity.sentence}}
-                                                </h5>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="col-md-3">
                         <div class="panel panel-primary" style="margin-top:20px">
@@ -408,18 +332,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="data-tile">
-                                    <div class="col-md-4">
-                                        <img src="/images/environment/air_condition.png" />
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="key-title">
-                                            <h5 style="margin:5px">气象监测点</h5>
-                                            <h5 style="margin:5px">正常数/总数:</h5>
-                                            <h5 style="margin:5px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{airConditionQualified}}</h5>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                         <div class="panel panel-primary" style="margin-top:25px">
