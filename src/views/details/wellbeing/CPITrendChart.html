@@ -159,7 +159,7 @@
                     <div class="row">
                       <div class="col-md-6" v-repeat="tempFood in tempFoodType.data" style="font-size: 14px">
                         <label class="col-md-10">{{tempFood.name}}</label>
-                        <input class="col-md-2" type="checkbox" v-model="tempFood.model" ng-change="checkBoxChange(tempFood)">
+                        <input class="col-md-2" type="checkbox" v-model="tempFood.model" @change="checkBoxChange(tempFood)">
                       </div>
                     </div>
                   </div>

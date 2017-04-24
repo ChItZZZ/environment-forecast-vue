@@ -109,7 +109,7 @@
 										    										 
 										    	<ul class="nav nav-pills col-md-4" style="margin-top:3mm;">
 										    	
-										    		<select name="monitor" class="form-control"  v-model="xuanzedanwei" ng-change="danweiClick(xuanzedanwei)">
+										    		<select name="monitor" class="form-control"  v-model="xuanzedanwei" @change="danweiClick(xuanzedanwei)">
 													<option v-repeat="danwei in danweis">{{danwei.danweiname}}</option>
 					                       			 </select>
 												</ul>
@@ -150,7 +150,7 @@
 										    <div class="col-md-12" align="left">	
 										    	<div class="nav nav-pills col-md-3" style="margin-top:3mm;">请选择想要查看的部门:</div>										 
 										    	<ul class="nav nav-pills col-md-4" style="margin-top:3mm;">
-												   <select name="monitor" class="form-control"  v-model="xuanzedanwei_shijian" ng-change="danwei_shijianClick(xuanzedanwei_shijian)">
+												   <select name="monitor" class="form-control"  v-model="xuanzedanwei_shijian" @change="danwei_shijianClick(xuanzedanwei_shijian)">
 													<option v-repeat="danwei in danweis">{{danwei.danweiname}}</option>
 					                       			 </select>
 												</ul>

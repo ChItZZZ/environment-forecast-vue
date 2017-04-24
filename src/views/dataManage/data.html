@@ -5,7 +5,7 @@
     <button class="btn btn-sm btn-default" @click="queryData()">高级查询</button>
     <button class="btn btn-sm btn-default" @click="reloadData()">刷新全部</button>
   </div>
-  <pagination ng-change="pageChange()" total-items="pageInfo.totalItems" items-per-page="pageInfo.pageSize" v-model="pageInfo.pageNumber" max-size="1" class="pagination-md" boundary-links="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页" style="margin:0px 0px;float: right"></pagination>
+  <pagination @change="pageChange()" total-items="pageInfo.totalItems" items-per-page="pageInfo.pageSize" v-model="pageInfo.pageNumber" max-size="1" class="pagination-md" boundary-links="true" previous-text="上一页" next-text="下一页" first-text="首页" last-text="末页" style="margin:0px 0px;float: right"></pagination>
   <div class="table-responsive" style="margin-top:10px">
     <table class="table table-striped table-bordered">
       <thead>
@@ -185,7 +185,7 @@
           <form class="form-inline" role="form" name="queryDataForm">
             <div v-repeat="queryOne in queryArr" class="col-sm-12" style="margin-bottom: 10px">
               <div class="form-group col-sm-3">
-                <select class="form-control" v-model="queryOne.index" style="width:130px"  ng-change="queryOneReset(queryOne)" ng-options="column.description for column in allColumns" required></select>
+                <select class="form-control" v-model="queryOne.index" style="width:130px"  @change="queryOneReset(queryOne)" ng-options="column.description for column in allColumns" required></select>
               </div>
               <div ng-if="queryOne.index.valueType == 'dict'">
                 <div class="form-group col-sm-2">

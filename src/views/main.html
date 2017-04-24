@@ -74,8 +74,6 @@
                                         </td>
                                         <td class="tr-kpidepartment">{{kpi.department.name}}</td>
                                         <td style="text-align:left;">{{kpi | kpiTypeFilter}}</td>
-                                        <!-- <td>{{ kpi.updateTime |  date:'yyyy年MM月dd日' }}</td>
-                                    -->
                                     <td class="tr-kpidate">{{kpi |  applyDateFilter }}</td>
                                     <th>
                                         <a ui-sref="app.kpicategory({categoryId:domain.selectedCategory.id})">查看详情</a>
@@ -84,7 +82,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <pagination class="pull-right" direction-links="true" total-items="domain.selectedCategory.total" v-model="domain.selectedCategory.curr_page" ng-change="pageChanged(domain.selectedCategory)" items-per-page="10" previous-text="上一页" next-text="下一页"></pagination>
+                    <pagination class="pull-right" direction-links="true" total-items="domain.selectedCategory.total" v-model="domain.selectedCategory.curr_page" @change="pageChanged(domain.selectedCategory)" items-per-page="10" previous-text="上一页" next-text="下一页"></pagination>
                 </div>
             </div>
         </div>
