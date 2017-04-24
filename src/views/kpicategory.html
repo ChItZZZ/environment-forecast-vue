@@ -107,7 +107,7 @@
               <p class="ioc-panel-desc-title">
                 <img src="/images/common/titles/one-sentence.png"/>
               </p>
-            <div ng-if="class.data[class.select_index].kpiStatus.status != 'nodata'">
+            <div v-if="class.data[class.select_index].kpiStatus.status != 'nodata'">
               <p>
                 {{ class.curExplain.date }}{{class.curKpi.name}} KPI 值为 {{class.curKpi | unit_trans}}。
               </p>
@@ -116,7 +116,7 @@
                 <label class="label {{class.curKpi.data.status | kpiStatusClass}} status">{{ class.curKpi.data.status | kpiStatusText}}</label>
               </p>
             </div>
-            <div ng-if="class.data[class.select_index].kpiStatus.status == 'nodata'">
+            <div v-if="class.data[class.select_index].kpiStatus.status == 'nodata'">
               <p>{{ class.curExplain.date }}{{class.curKpi.name}} KPI 数据缺失</p>
 
             </div>

@@ -1,4 +1,4 @@
-<div ng-if="currTable" >
+<div v-if="currTable" >
   <div class="btn-group">
     <button class="btn btn-sm btn-default" @click="addData()">添加数据</button>
     <button class="btn btn-sm btn-default" @click="addBatchData()">导入数据</button>
@@ -46,28 +46,28 @@
             </div>
             <div class="form-group" v-repeat="column in currTable.columns">
               <label class="col-sm-4 control-label">{{getColumnNameUnit(column)}}</label>
-              <div class="col-sm-6" ng-if="column.type == 'dict'">
+              <div class="col-sm-6" v-if="column.type == 'dict'">
                 <select class="form-control" v-model="addDataTemp[column.name]" ng-options="dict.name for dict in column.dictType.dictDatas" required></select>
               </div>
-              <div class="col-sm-6" ng-if="column.type == 'TrnspPrjctPrgrsData'">
+              <div class="col-sm-6" v-if="column.type == 'TrnspPrjctPrgrsData'">
                 <select class="form-control" v-model="addDataTemp[column.name]" ng-options="trnspPrjct.prjctName for trnspPrjct in trnspPrjctDataList" required></select>
               </div>
-              <div class="col-sm-6" ng-if="column.type == 'bboolean'">
+              <div class="col-sm-6" v-if="column.type == 'bboolean'">
                 <select class="form-control" v-model="addDataTemp[column.name]" ng-options="getBooleanChinese(bolleanOne) for bolleanOne in booelanArr" required></select>
               </div>
                <ng-form name="addDataForm_sub1">
-              <div class="col-sm-6" ng-if="column.type == 'ddouble'">
+              <div class="col-sm-6" v-if="column.type == 'ddouble'">
                 <input v-model="addDataTemp[column.name]" name="a" class="form-control" type="number" required>
                 <span style="color:red" v-show="addDataForm_sub1.a.$dirty && addDataForm_sub1.a.$invalid">请输入有效数字</span></ng-form>
               </div>
-              <div class="col-sm-6" ng-if="column.type == 'sstring'">
+              <div class="col-sm-6" v-if="column.type == 'sstring'">
                 <input v-model="addDataTemp[column.name]" class="form-control" type="text" required></div>
                 <ng-form name="addDataForm_sub2">
-              <div class="col-sm-6" ng-if="column.type == 'iint'">
+              <div class="col-sm-6" v-if="column.type == 'iint'">
                 <input v-model="addDataTemp[column.name]" name="b" class="form-control" type="text" onkeyup="this.value=this.value.replace(/[^(\d)]/g,'')" onpaste="this.value=this.value.replace(/[^(\d)]/g,'')" required>
                 <span style="color:red" v-show="addDataForm_sub2.b.$dirty && addDataForm_sub2.b.$invalid">请输入有效整数</span>
               </div>
-              <div class="col-sm-6" ng-if="column.type == 'enum'">
+              <div class="col-sm-6" v-if="column.type == 'enum'">
                 <select class="form-control" v-model="addDataTemp[column.name]" ng-options="enum for enum in column.enumArr.split(',')" required></select>
               </div>
             </div>
@@ -114,20 +114,20 @@
             </div>
             <div class="form-group" v-repeat="column in currTable.columns">
               <label class="col-sm-4 control-label">{{getColumnNameUnit(column)}}</label>
-              <div class="col-sm-8" ng-if="column.type == 'dict'">{{updateDataTemp[column.name].name}}</div>
-              <div class="col-sm-6" ng-if="column.type == 'TrnspPrjctPrgrsData'">
+              <div class="col-sm-8" v-if="column.type == 'dict'">{{updateDataTemp[column.name].name}}</div>
+              <div class="col-sm-6" v-if="column.type == 'TrnspPrjctPrgrsData'">
                 {{updateDataTemp[column.name].prjctName}}
               </div>
-              <div class="col-sm-6" ng-if="column.type == 'bboolean'">
+              <div class="col-sm-6" v-if="column.type == 'bboolean'">
                 <select class="form-control" v-model="updateDataTemp[column.name]" ng-options="getBooleanChinese(bolleanOne) for bolleanOne in booelanArr" required></select>
               </div>
-              <div class="col-sm-8" ng-if="column.type == 'ddouble'">
+              <div class="col-sm-8" v-if="column.type == 'ddouble'">
                 <input v-model="updateDataTemp[column.name]" class="form-control" type="text" ng-disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
-              <div class="col-sm-8" ng-if="column.type == 'sstring'">
+              <div class="col-sm-8" v-if="column.type == 'sstring'">
                 <input v-model="updateDataTemp[column.name]" class="form-control" type="text" ng-disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
-              <div class="col-sm-8" ng-if="column.type == 'iint'">
+              <div class="col-sm-8" v-if="column.type == 'iint'">
                 <input v-model="updateDataTemp[column.name]" class="form-control" type="text" ng-disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
-              <div class="col-sm-8" ng-if="column.type == 'emum'">
+              <div class="col-sm-8" v-if="column.type == 'emum'">
                 <input v-model="updateDataTemp[column.name]" class="form-control" type="text" ng-disabled="currTableEditStatus == 'View'&&column.editable == 0" required></div>
 
             </div>
@@ -187,28 +187,28 @@
               <div class="form-group col-sm-3">
                 <select class="form-control" v-model="queryOne.index" style="width:130px"  @change="queryOneReset(queryOne)" ng-options="column.description for column in allColumns" required></select>
               </div>
-              <div ng-if="queryOne.index.valueType == 'dict'">
+              <div v-if="queryOne.index.valueType == 'dict'">
                 <div class="form-group col-sm-2">
                   <select class="form-control" v-model="queryOne.queryType" style="width:100px" ng-options="getQueryTypeChineseName(query) for query in queryTypeArr.slice(2,3)" required></select>
                 </div>
               </div>
-              <div ng-if="!(queryOne.index.valueType == 'dict')">
+              <div v-if="!(queryOne.index.valueType == 'dict')">
                 <div class="form-group col-sm-2">
                   <select class="form-control" v-model="queryOne.queryType" style="width:100px" ng-options="getQueryTypeChineseName(query) for query in queryTypeArr" required></select>
                 </div>
               </div>
-              <div ng-if="queryOne.queryType == 'bt'&&queryOne.index.valueType != 'dict'">
+              <div v-if="queryOne.queryType == 'bt'&&queryOne.index.valueType != 'dict'">
                 <div class="form-group col-sm-2" style="margin-left:20px">
                   <input type="text" class="form-control" style="width:80px" v-model="queryOne.value1" placeholder="较小值" required></div>
                 <div class="form-group col-sm-2">
                   <input type="text" class="form-control" style="width:80px" v-model="queryOne.value2" placeholder="较大值" required></div>
               </div>
-              <div ng-if="queryOne.index.valueType == 'dict'">
+              <div v-if="queryOne.index.valueType == 'dict'">
                 <div class="form-group col-sm-4" style="margin-left:20px">
                   <select class="form-control" v-model="queryOne.value1" style="width:160px" ng-options="dictData.name for dictData in queryOne.index.columnInfo.dictType.dictDatas" required></select>
                 </div>
               </div>
-              <div ng-if="queryOne.queryType != 'bt'&&queryOne.index.valueType != 'dict'">
+              <div v-if="queryOne.queryType != 'bt'&&queryOne.index.valueType != 'dict'">
                 <div class="form-group col-sm-4" style="margin-left:20px">
                   <input type="text" class="form-control" style="width:160px" v-model="queryOne.value1" placeholder="比较值" required></div>
               </div>
