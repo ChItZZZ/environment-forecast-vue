@@ -77,7 +77,7 @@
                                         <a href="">权限管理</a>
                                     </p>
                                     <ul>
-                                        <li><a @click="closePullInfo()" ui-sref="app.userConfig">权限配置</a></li>
+                                        <li><a @click="closePullInfo" ui-sref="app.userConfig">权限配置</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-2">
@@ -85,7 +85,7 @@
                                         <a href="">KPI管理</a>
                                     </p>
                                     <ul>
-                                        <li><a @click="closePullInfo()" ui-sref="app.kpiConfig">KPI配置</a></li>
+                                        <li><a @click="closePullInfo" ui-sref="app.kpiConfig">KPI配置</a></li>
                                     </ul>
                                 </div>
 
@@ -95,7 +95,7 @@
                     </div>
                     <div class="nav-pannel-bottom">
         <span class="glyphicon glyphicon-eject close-icon"
-              @click="closeNavPannel()"></span>
+              @click="closeNavPannel"></span>
                     </div>
                 </div>
             </div>
@@ -124,6 +124,8 @@
                             <button @click="userResetPasswordPre()" type="submit" class="btn btn-primary"
                                     ng-disabled="userResetPasswordForm.$invalid">确定
 
+
+
                             </button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                         </div>
@@ -144,6 +146,8 @@
                         <div class="modal-footer">
                             <button @click="userResetPasswordProcess()" class="btn btn-primary" data-dismiss="modal">确定
 
+
+
                             </button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                         </div>
@@ -156,6 +160,95 @@
 
 <script>
     export default {
-        name: 'ioc-head'
+        name: 'ioc-head',
+        data(){
+            return {
+                systemManageNavStatus:false
+            }
+        },
+        created(){
+            /*系统管理显示导航*/
+            if ($localStorage.currentUser.role == 'ADMINISTRATOR') {
+                this.systemManageNavStatus = true;
+            }
+        },
+        methods: {
+            closePullInfo: function () {
+                $scope.opened = false;
+            },
+            userResetPasswordProcess: function () {
+                $('#userResetPasswordModal').modal('hide');
+                var promiseUserResetPassword = qService.tokenHttpPost(accountFactory.accountResetPassword, null, {
+                    password: $scope.newInfo.password
+                });
+                promiseUserResetPassword.then(function (data) {
+                    //alert(JSON.stringify(data));
+                    inform.add('密码修改成功', error_conf);
+                    pageUserInit();
+                });
+            },
+            closeNavPannel: function () {
+                $scope.isNavPannelCollapsed = true;
+                kpiContainer.css('left', '1024px');
+                biContainer.css('left', '1024px');
+                peizhiContainer.css('left', '1024px');
+            },
+            showNavPannel: function (navName) {
+                if ($scope.isNavPannelCollapsed) {
+                    $scope.isNavPannelCollapsed = false;
+                    if (navName == 'kpi') {
+                        $scope.initItems();
+                        kpiContainer.animate({
+                            left: '0'
+                        });
+                    } else if (navName == 'bi') {
+                        biContainer.animate({
+                            left: '0'
+                        });
+                    } else if (navName == 'peizhi') {
+                        peizhiContainer.animate({
+                            left: '0'
+                        });
+                    } else {
+                        peizhiContainer.animate({
+                            left: '0'
+                        });
+                    }
+                } else {
+                    if (navName == 'kpi') {
+                        kpiContainer.animate({
+                            left: '0'
+                        });
+                        biContainer.animate({
+                            left: '1024px'
+                        });
+                        peizhiContainer.animate({
+                            left: '1024px'
+                        });
+                    } else if (navName == 'bi') {
+                        biContainer.animate({
+                            left: '0'
+                        });
+                        kpiContainer.animate({
+                            left: '1024px'
+                        });
+                        peizhiContainer.animate({
+                            left: '1024px'
+                        });
+                    } else if (navName == 'peizhi') {
+                        peizhiContainer.animate({
+                            left: '0'
+                        });
+                        biContainer.animate({
+                            left: '1024px'
+                        });
+                        kpiContainer.animate({
+                            left: '1024px'
+                        });
+                    }
+                }
+            }
+        }
+
     }
 </script>
