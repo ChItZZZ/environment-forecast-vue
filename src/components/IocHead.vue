@@ -18,7 +18,7 @@
                     <li>
                         <a @click="showNavPannel('bi')">智能分析</a>
                     </li>
-                    <li ng-if="systemManageNavStatus">
+                    <li v-if="systemManageNavStatus">
                         <a @click="showNavPannel('peizhi')">系统管理</a>
                     </li>
 
@@ -29,12 +29,12 @@
                         <div class="kpi-container">
                             <div class="row">
 
-                                <div class="col-md-2" ng-repeat="domain in blueMap">
+                                <div class="col-md-2" v-repeat="domain in blueMap">
                                     <p>
                                         <a>{{domain.name}}</a>
                                     </p>
                                     <ul>
-                                        <li ng-repeat="category in domain.categories"><a
+                                        <li v-repeat="category in domain.categories"><a
                                                 ui-sref="app.kpicategory({categoryId:category.id})">{{category.name}}</a>
                                         </li>
                                     </ul>
@@ -113,7 +113,7 @@
                             <div class="form-group col-md-6">
                                 <div class="col-sm-4">新密码:*</div>
                                 <div class="col-sm-8">
-                                    <input name="accountName" ng-model="newInfo.password" class="form-control input-sm"
+                                    <input name="accountName" v-model="newInfo.password" class="form-control input-sm"
                                            required>
                                 </div>
                             </div>
@@ -122,9 +122,7 @@
                     <div>
                         <div class="modal-footer">
                             <button @click="userResetPasswordPre()" type="submit" class="btn btn-primary"
-                                    ng-disabled="userResetPasswordForm.$invalid">确定
-
-
+                                    :disabled="userResetPasswordForm.$invalid">确定
 
                             </button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>

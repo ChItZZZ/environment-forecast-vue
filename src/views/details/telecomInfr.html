@@ -36,7 +36,7 @@
 									<h4>用户类别选择</h4>
 									<div class="radio" v-repeat="user in userList">
 										<label>
-											<input type="radio" v-model="userKindSelected" ng-value="user.name" name="userList" @click="userKindChange(user)">
+											<input type="radio" v-model="userKindSelected" :value="user.name" name="userList" @click="userKindChange(user)">
 								            <font size="3">{{user.name}}</font>
 								        </label>
 									</div>
@@ -75,7 +75,7 @@
 									<h4>基础设施选择</h4>
 									<div class="radio" v-repeat="infrstrct in infrstrctTotalList">
 										<label>
-											<input type="radio" v-model="infrstrctKindSelected" ng-value="infrstrct.name" name="infrstrctTotalList" @click="infrstrctKindChange(infrstrct)">
+											<input type="radio" v-model="infrstrctKindSelected" :value="infrstrct.name" name="infrstrctTotalList" @click="infrstrctKindChange(infrstrct)">
 								            <font size="3">{{infrstrct.name}}</font>
 								        </label>
 									</div>

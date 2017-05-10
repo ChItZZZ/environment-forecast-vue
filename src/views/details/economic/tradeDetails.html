@@ -55,7 +55,7 @@
                   <h4></h4>
                   <div class="radio" v-repeat="studyQualityOne in studyQuality">
                     <label>
-                      <input type="radio" v-model="studyQualityKindSelected" ng-value="studyQualityOne.name" name="studyQuality" @click="studyQualityKindChange(studyQualityOne)">
+                      <input type="radio" v-model="studyQualityKindSelected" :value="studyQualityOne.name" name="studyQuality" @click="studyQualityKindChange(studyQualityOne)">
                             {{studyQualityOne.name}}
                         </label>
                   </div>
@@ -106,7 +106,7 @@
                   <h4></h4>
                   <div class="radio" v-repeat="schoolQualityOne in schoolQuality">
                     <label>
-                      <input type="radio" v-model="schoolQualityKindSelected" ng-value="schoolQualityOne.name" name="schoolQualityLastYearList" @click="schoolQualityKindChange(schoolQualityOne)">
+                      <input type="radio" v-model="schoolQualityKindSelected" :value="schoolQualityOne.name" name="schoolQualityLastYearList" @click="schoolQualityKindChange(schoolQualityOne)">
                             {{schoolQualityOne.name}}
                         </label>
                   </div>

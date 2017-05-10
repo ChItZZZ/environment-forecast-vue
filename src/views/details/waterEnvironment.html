@@ -190,7 +190,7 @@
 										<h4>水质监测点选择</h4>
 										<div style="font-size:14px;">
 											<div class="radio" v-repeat="waterQualityOne in waterQualityCurrentList"><label>
-												<input type="radio" v-model="waterQualityCurrentListSelected" ng-value="waterQualityOne.monitor" name="waterQualityCurrentListRadio" @click="waterQualityCurrentChange(waterQualityOne)">{{waterQualityOne.monitor}}
+												<input type="radio" v-model="waterQualityCurrentListSelected" :value="waterQualityOne.monitor" name="waterQualityCurrentListRadio" @click="waterQualityCurrentChange(waterQualityOne)">{{waterQualityOne.monitor}}
 											</label></div>
 										</div>
 										<hr>
@@ -247,7 +247,7 @@
 										<h4>废水排放指标选择</h4>
 										<div style="font-size:14px;">
 											<div class="radio" v-repeat="wasteWaterOne in wasteWaterCurrentList"><label>
-												<input type="radio" v-model="wasteWaterCurrentListSelected" ng-value="wasteWaterOne" name="wasteWaterCurrentListRadio" @click="wasteWaterCurrentChange(wasteWaterOne)">{{wasteWaterOne}}
+												<input type="radio" v-model="wasteWaterCurrentListSelected" :value="wasteWaterOne" name="wasteWaterCurrentListRadio" @click="wasteWaterCurrentChange(wasteWaterOne)">{{wasteWaterOne}}
 											</label></div>
 										</div>
 										<hr>
@@ -304,7 +304,7 @@
 										<h4>水情监测点选择</h4>
 										<div style="font-size:14px;">
 											<div class="radio" v-repeat="waterConditionOne in waterConditionCurrentList"><label>
-												<input type="radio" v-model="waterConditionCurrentListSelected" ng-value="waterConditionOne.monitor" name="waterConditionCurrentListRadio" @click="waterConditionCurrentChange(waterConditionOne)">{{waterConditionOne.monitor}}
+												<input type="radio" v-model="waterConditionCurrentListSelected" :value="waterConditionOne.monitor" name="waterConditionCurrentListRadio" @click="waterConditionCurrentChange(waterConditionOne)">{{waterConditionOne.monitor}}
 											</label></div>
 										</div>
 										<hr>

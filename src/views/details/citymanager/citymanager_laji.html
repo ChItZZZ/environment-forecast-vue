@@ -88,7 +88,7 @@
 												<h4>垃圾清运点选择</h4>
 												<div  style="overflow: auto; overflow-x:hidden;height:450px">
 												<div class="radio" style="left:10px" v-repeat="lajiqingyundianone in lajiqingyundianlist"><label>
-													<input type="radio" v-model="lajiqingyundian" ng-value="lajiqingyundianone" name="lajiqingyundian" @click="lajiqingyundianClick(lajiqingyundianone)">{{lajiqingyundianone}}
+													<input type="radio" v-model="lajiqingyundian" :value="lajiqingyundianone" name="lajiqingyundian" @click="lajiqingyundianClick(lajiqingyundianone)">{{lajiqingyundianone}}
 												</label></div>
 												</div>
 												
@@ -163,7 +163,7 @@
 												<h4>垃圾清运点选择</h4>
 												<div  style="overflow: auto; overflow-x:hidden;height:450px">
 												<div class="radio" style="left:10px" v-repeat="lajiqingyundianone in lajiqingyundian_01list"><label>
-													<input type="radio" v-model="lajiqingyundian_01" ng-value="lajiqingyundianone" name="lajiqingyundian_01" @click="lajiqingyundian_01Click(lajiqingyundianone)">{{lajiqingyundianone}}
+													<input type="radio" v-model="lajiqingyundian_01" :value="lajiqingyundianone" name="lajiqingyundian_01" @click="lajiqingyundian_01Click(lajiqingyundianone)">{{lajiqingyundianone}}
 												</label></div>
 												</div>
 												<p class="fill-margin"></p>

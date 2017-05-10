@@ -199,7 +199,7 @@
 				                <!-- <div class="col-md-3" style="border:1px solid grey;font-size:13px;line-height:30px;margin-top:80px">
 				                	<div class="radio" v-repeat="radioPredictionOne in radioPredictionList">
 				                										<label>
-				                										    <input type="radio" name="radio_prediction" value="COD" v-model="radioPredictionListSelected" ng-value="radioPredictionOne" @click="radioPredicitonChange(radioPredictionOne)">
+				                										    <input type="radio" name="radio_prediction" value="COD" v-model="radioPredictionListSelected" :value="radioPredictionOne" @click="radioPredicitonChange(radioPredictionOne)">
 				                										    {{radioPredictionOne}}
 				                										</label>
 				                									</div>

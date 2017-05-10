@@ -44,7 +44,7 @@
 									<h4>医院类别选择</h4>
 									<div class="radio" v-repeat="medicalInstitutionSumOne in medicalInstitutionByKindSumList">
 										<label>
-											<input type="radio" v-model="medicalInstitutionSelected" ng-value="medicalInstitutionSumOne.name" name="medicalInstitutionByKindSumList" @click="medicalInstitutionKindChange(medicalInstitutionSumOne)">
+											<input type="radio" v-model="medicalInstitutionSelected" :value="medicalInstitutionSumOne.name" name="medicalInstitutionByKindSumList" @click="medicalInstitutionKindChange(medicalInstitutionSumOne)">
 								            <font size="3">{{medicalInstitutionSumOne.name}}</font>
 								        </label>
 									</div>
@@ -106,7 +106,7 @@
 									<h4>诊疗类别选择</h4>
 									<div class="radio" v-repeat="medicalServicePatientsOne in medicalServicePatientsByKindList">
 										<label>
-											<input type="radio" v-model="medicalServiceSelected" ng-value="medicalServicePatientsOne.name" name="medicalServicePatientsByKindList" @click="medicalServiceKindChange(medicalServicePatientsOne)">
+											<input type="radio" v-model="medicalServiceSelected" :value="medicalServicePatientsOne.name" name="medicalServicePatientsByKindList" @click="medicalServiceKindChange(medicalServicePatientsOne)">
 								            <font size="3">{{medicalServicePatientsOne.name}}</font>
 								        </label>
 									</div>

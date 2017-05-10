@@ -49,7 +49,7 @@
 									<h4>传染病类别选择</h4>
 									<div class="radio" v-repeat="infectiousDiseasesOne in infectiousDiseasesByKindList">
 										<label>
-											<input type="radio" v-model="infectiousDiseasesKindSelected" ng-value="infectiousDiseasesOne.name" name="infectiousDiseasesByKindList" @click="infectiousDiseasesKindChange(infectiousDiseasesOne)">
+											<input type="radio" v-model="infectiousDiseasesKindSelected" :value="infectiousDiseasesOne.name" name="infectiousDiseasesByKindList" @click="infectiousDiseasesKindChange(infectiousDiseasesOne)">
 								            <font size="3">{{infectiousDiseasesOne.name}}</font>
 								        </label>
 									</div>
@@ -75,7 +75,7 @@
 									<h4>期望寿命类别选择</h4>
 									<div class="radio" v-repeat="averageExpectedLifeOne in averageExpectedLifeByKindList">
 										<label>
-											<input type="radio" v-model="averageExpectedLifeKindSelected" ng-value="averageExpectedLifeOne.name" name="averageExpectedLifeByKindList" @click="averageExpectedLifeKindChange(averageExpectedLifeOne)">
+											<input type="radio" v-model="averageExpectedLifeKindSelected" :value="averageExpectedLifeOne.name" name="averageExpectedLifeByKindList" @click="averageExpectedLifeKindChange(averageExpectedLifeOne)">
 								            <font size="3">{{averageExpectedLifeOne.name}}</font>
 								        </label>
 									</div>
@@ -112,7 +112,7 @@
 									<h4>妇幼死亡率类别选择</h4>
 									<div class="radio" v-repeat="womenAndChildrenDeathRateOne in womenAndChildrenDeathRateByKindList">
 										<label>
-											<input type="radio" v-model="womenAndChildrenDeathRateKindSelected" ng-value="womenAndChildrenDeathRateOne.name" name="womenAndChildrenDeathRateByKindList" @click="womenAndChildrenDeathRateKindChange(womenAndChildrenDeathRateOne)">
+											<input type="radio" v-model="womenAndChildrenDeathRateKindSelected" :value="womenAndChildrenDeathRateOne.name" name="womenAndChildrenDeathRateByKindList" @click="womenAndChildrenDeathRateKindChange(womenAndChildrenDeathRateOne)">
 								            <font size="3">{{womenAndChildrenDeathRateOne.name}}</font>
 								        </label>
 									</div>

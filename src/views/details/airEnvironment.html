@@ -191,7 +191,7 @@
                                         <h4>空气质量监测点选择</h4>
                                         <div style="font-size:14px;">
                                             <div class="radio" v-repeat="airQualityOne in airQualityCurrentList"><label>
-                                                <input type="radio" v-model="airQualityCurrentListSelected" ng-value="airQualityOne.monitor" name="airQualityCurrentListRadio" @click="airQualityCurrentChange(airQualityOne)">{{airQualityOne.monitor}}
+                                                <input type="radio" v-model="airQualityCurrentListSelected" :value="airQualityOne.monitor" name="airQualityCurrentListRadio" @click="airQualityCurrentChange(airQualityOne)">{{airQualityOne.monitor}}
                                             </label></div>
                                         </div>
                                         <hr>
@@ -258,7 +258,7 @@
                                         <h4>废气排放指标选择</h4>
                                         <div style="font-size:14px;">
                                             <div class="radio" v-repeat="wasteAirOne in wasteAirCurrentList"><label>
-                                                <input type="radio" v-model="wasteAirCurrentListSelected" ng-value="wasteAirOne" name="wasteAirCurrentListRadio" @click="wasteAirCurrentChange(wasteAirOne)">{{wasteAirOne}}
+                                                <input type="radio" v-model="wasteAirCurrentListSelected" :value="wasteAirOne" name="wasteAirCurrentListRadio" @click="wasteAirCurrentChange(wasteAirOne)">{{wasteAirOne}}
                                             </label></div>
                                         </div>
                                         <hr>

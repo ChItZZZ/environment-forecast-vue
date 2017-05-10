@@ -36,7 +36,7 @@
 									<h4>教育普及类别选择</h4>
 									<div class="radio" v-repeat="eduUniversalOne in eduUniversalList">
 										<label>
-											<input type="radio" v-model="eduUniversalKindSelected" ng-value="eduUniversalOne.name" name="eduUniversalList" @click="eduUniversalKindChange(eduUniversalOne)">
+											<input type="radio" v-model="eduUniversalKindSelected" :value="eduUniversalOne.name" name="eduUniversalList" @click="eduUniversalKindChange(eduUniversalOne)">
 								            <font size="3">{{eduUniversalOne.name}}</font>
 								        </label>
 									</div>
@@ -70,7 +70,7 @@
 									<h4>校际差异系数类别选择</h4>
 									<div class="radio" v-repeat="eduEquityIndexOne in eduEquityIndexList">
 										<label>
-											<input type="radio" v-model="eduEquityIndexKindSelected" ng-value="eduEquityIndexOne.name" name="eduEquityIndexList" @click="eduEquityIndexKindChange(eduEquityIndexOne)">
+											<input type="radio" v-model="eduEquityIndexKindSelected" :value="eduEquityIndexOne.name" name="eduEquityIndexList" @click="eduEquityIndexKindChange(eduEquityIndexOne)">
 								            <font size="3">{{eduEquityIndexOne.name}}</font>
 								        </label>
 									</div>

@@ -48,7 +48,7 @@
 									<h4>土地出让指标选择</h4>
 									<div style="font-size:13px;">
 										<div class="radio" v-repeat="landUseOne in landUseGrantList"><label>
-											<input type="radio" v-model="landUseGrantListSelected" ng-value="landUseOne" name="landUseGrantListRadio" @click="landUseGrantListChange(landUseOne)">{{landUseOne}}
+											<input type="radio" v-model="landUseGrantListSelected" :value="landUseOne" name="landUseGrantListRadio" @click="landUseGrantListChange(landUseOne)">{{landUseOne}}
 										</label></div>
 									</div>
 									<hr>
@@ -76,7 +76,7 @@
 									<h4>土地类型选择</h4>
 									<div style="font-size:13px;">
 										<div class="radio" v-repeat="landUseOne in landUseDetailList"><label>
-											<input type="radio" v-model="landUseOneDetailListSelected" ng-value="landUseOne" name="landUseDetailListRadio" @click="landUseDetailListChange(landUseOne)">{{landUseOne}}面积
+											<input type="radio" v-model="landUseOneDetailListSelected" :value="landUseOne" name="landUseDetailListRadio" @click="landUseDetailListChange(landUseOne)">{{landUseOne}}面积
 										</label></div>
 									</div>
 									<hr>
@@ -135,7 +135,7 @@
 									<h4>土地执法指标选择</h4>
 									<div style="font-size:13px;">
 										<div class="radio" v-repeat="landIllegalOne in landIllegalIndexList"><label>
-											<input type="radio" v-model="landIllegalIndexListSelected" ng-value="landIllegalOne" name="landIllegalIndexListRadio" @click="landIllegalIndexListChange(landIllegalOne)">违法用地{{landIllegalOne}}
+											<input type="radio" v-model="landIllegalIndexListSelected" :value="landIllegalOne" name="landIllegalIndexListRadio" @click="landIllegalIndexListChange(landIllegalOne)">违法用地{{landIllegalOne}}
 										</label></div>
 									</div>
 									<hr>

@@ -44,7 +44,7 @@
 									<h4>客运车辆类别选择</h4>
 									<div class="radio" v-repeat="passengerCapacityOne in passengerCapacityByKindList">
 										<label>
-											<input type="radio" v-model="passengerCapacitySelected" ng-value="passengerCapacityOne.name" name="passengerCapacityByKindList" @click="passengerCapacityKindChange(passengerCapacityOne)">
+											<input type="radio" v-model="passengerCapacitySelected" :value="passengerCapacityOne.name" name="passengerCapacityByKindList" @click="passengerCapacityKindChange(passengerCapacityOne)">
 								            <font size="3">{{passengerCapacityOne.name}}</font>
 								        </label>
 									</div>
@@ -107,7 +107,7 @@
 									<h4>新(清洁)能源客运车辆类别选择</h4>
 									<div class="radio" v-repeat="vehicleOne in vehicleByKindSumList">
 										<label>
-											<input type="radio" v-model="vehicleKindSelected" ng-value="vehicleOne.name" name="vehicleByKindSumList" @click="vehicleKindChange(vehicleOne)">
+											<input type="radio" v-model="vehicleKindSelected" :value="vehicleOne.name" name="vehicleByKindSumList" @click="vehicleKindChange(vehicleOne)">
 								            <font size="3">{{vehicleOne.name}}</font>
 								        </label>
 									</div>

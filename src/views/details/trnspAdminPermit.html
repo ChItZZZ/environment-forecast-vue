@@ -38,7 +38,7 @@
 									<h4>交通行政案件类别选择</h4>
 									<div class="radio" v-repeat="transAdminOne in transAdminSumList">
 										<label>
-											<input type="radio" v-model="transAdminKindSelected" ng-value="transAdminOne.name" name="transAdminSumList" @click="transAdminKindChange(transAdminOne)">
+											<input type="radio" v-model="transAdminKindSelected" :value="transAdminOne.name" name="transAdminSumList" @click="transAdminKindChange(transAdminOne)">
 								            <font size="3">{{transAdminOne.name}}</font>
 								        </label>
 									</div>
@@ -73,7 +73,7 @@
 									<h4>交通许可类别选择</h4>
 									<div class="radio" v-repeat="permissionOne in permissionList">
 										<label>
-											<input type="radio" v-model="permissionKindSelected" ng-value="permissionOne.name" name="permissionList" @click="permissionKindChange(permissionOne)">
+											<input type="radio" v-model="permissionKindSelected" :value="permissionOne.name" name="permissionList" @click="permissionKindChange(permissionOne)">
 								            <font size="3">{{permissionOne.name}}</font>
 								        </label>
 									</div>
