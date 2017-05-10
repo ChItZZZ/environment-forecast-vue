@@ -9,7 +9,14 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+      // vendor: [
+      //     'jquery',
+      //     'vue',
+      //     'vue-router',
+      //     'vuex',
+      // ]
+
   },
   output: {
     path: config.build.assetsRoot,
