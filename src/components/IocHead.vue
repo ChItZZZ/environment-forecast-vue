@@ -13,13 +13,13 @@
                         <a class="current" href="javascript:void(0)">首页</a>
                     </li>
                     <li>
-                        <a ng-click="showNavPannel('kpi')">关键业绩指标</a>
+                        <a @click="showNavPannel('kpi')">关键业绩指标</a>
                     </li>
                     <li>
-                        <a ng-click="showNavPannel('bi')">智能分析</a>
+                        <a @click="showNavPannel('bi')">智能分析</a>
                     </li>
                     <li ng-if="systemManageNavStatus">
-                        <a ng-click="showNavPannel('peizhi')">系统管理</a>
+                        <a @click="showNavPannel('peizhi')">系统管理</a>
                     </li>
 
                 </ul>
@@ -77,7 +77,7 @@
                                         <a href="">权限管理</a>
                                     </p>
                                     <ul>
-                                        <li><a ng-click="closePullInfo()" ui-sref="app.userConfig">权限配置</a></li>
+                                        <li><a @click="closePullInfo()" ui-sref="app.userConfig">权限配置</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-2">
@@ -85,7 +85,7 @@
                                         <a href="">KPI管理</a>
                                     </p>
                                     <ul>
-                                        <li><a ng-click="closePullInfo()" ui-sref="app.kpiConfig">KPI配置</a></li>
+                                        <li><a @click="closePullInfo()" ui-sref="app.kpiConfig">KPI配置</a></li>
                                     </ul>
                                 </div>
 
@@ -95,7 +95,7 @@
                     </div>
                     <div class="nav-pannel-bottom">
         <span class="glyphicon glyphicon-eject close-icon"
-              ng-click="closeNavPannel()"></span>
+              @click="closeNavPannel()"></span>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                     </div>
                     <div>
                         <div class="modal-footer">
-                            <button ng-click="userResetPasswordPre()" type="submit" class="btn btn-primary"
+                            <button @click="userResetPasswordPre()" type="submit" class="btn btn-primary"
                                     ng-disabled="userResetPasswordForm.$invalid">确定
 
                             </button>
@@ -142,7 +142,7 @@
 
                     <div>
                         <div class="modal-footer">
-                            <button ng-click="userResetPasswordProcess()" class="btn btn-primary" data-dismiss="modal">确定
+                            <button @click="userResetPasswordProcess()" class="btn btn-primary" data-dismiss="modal">确定
 
                             </button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
