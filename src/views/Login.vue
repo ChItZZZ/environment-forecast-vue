@@ -1,3 +1,5 @@
+
+<template>
 <nav class="navbar navbar-ioc">
     <div class="container">
         <div class="navbar-header">
@@ -54,3 +56,12 @@
     </div>
 </div>
 
+</template>
+<script>
+    export default {
+        name:"login",
+        data(){
+
+        }
+    }
+</script>
