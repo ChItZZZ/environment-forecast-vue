@@ -16,7 +16,18 @@
     "bootstrap": "^3.2.0",
     "jquery": "^3.2.1",
     "vue": "^2.2.2",
-    "vue-router": "^2.3.0"
+    "vue-router": "^2.3.0",
+    "json3": "~3.3.1",
+    "es5-shim": "~3.1.0",
+    "bootstrap": "~3.2.0",
+    "jquery-ui": "*",
+    "font-awesome": "~4.2.0",
+    "ngstorage": "~0.3.0",
+    "selectivizr": "~1.0.2",
+    "oclazyload": "~0.6.3",
+    "jsog": "~1.0.7",
+    "moment": "~2.10.3",
+    "blueimp-md5": "1.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
