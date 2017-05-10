@@ -22,13 +22,14 @@
                 主办单位：太仓市经济和信息化委员会  同济大学软件学院
                 <br/>
                 ©1996-2015 Taicang Inc.All Right Reserved
-              </div>
+
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name:'ioc-foot'
+        name: 'ioc-foot'
     }
 </script>
