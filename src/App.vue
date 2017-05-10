@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <ioc-head></ioc-head>
-        <router-view></router-view>
-        <ioc-foot></ioc-foot>
+        <!--<router-view></router-view>-->
+        <ioc-foot id="foot"></ioc-foot>
     </div>
 </template>
 
@@ -14,13 +14,17 @@
     }
 </script>
 
-<style>
+<style lang="scss" scoped>
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
+        min-height: 100vh;
+    }
+    #foot{
+        position: absolute;
+        bottom: 0;
     }
 </style>

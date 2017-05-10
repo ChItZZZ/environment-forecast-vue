@@ -161,7 +161,8 @@
         name: 'ioc-head',
         data(){
             return {
-                systemManageNavStatus:false
+                systemManageNavStatus:false,
+                opened:false
             }
         },
         created(){

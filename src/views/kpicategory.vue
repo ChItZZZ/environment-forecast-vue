@@ -10,7 +10,6 @@
                         <a href="" @click="load()">{{domainName}}</a>
                     </li>
                     <li class="active">{{categoryName}}</li>
-
                 </ol>
                 <h1>{{domainName}}</h1>
 
@@ -44,7 +43,7 @@
                             <h3 class="title" style="margin-top: 0;">
                                 <div class="ioc-cat-title pull-left">
                                     <span>{{categoryName}}</span>
-                                </div>
+                                </div>m
                                 <span ng-bind-html='category.status '></span>
 
                                 <div class="pull-right title-desc">&nbsp;&nbsp;</div>
