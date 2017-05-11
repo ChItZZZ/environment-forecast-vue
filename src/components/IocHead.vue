@@ -29,16 +29,16 @@
                         <div class="kpi-container">
                             <div class="row">
 
-                                <div class="col-md-2" v-repeat="domain in blueMap">
-                                    <p>
-                                        <a>{{domain.name}}</a>
-                                    </p>
-                                    <ul>
-                                        <li v-repeat="category in domain.categories"><a
-                                                ui-sref="app.kpicategory({categoryId:category.id})">{{category.name}}</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <!--<div class="col-md-2" v-repeat="domain in blueMap">-->
+                                    <!--<p>-->
+                                        <!--<a>{{domain.name}}</a>-->
+                                    <!--</p>-->
+                                    <!--<ul>-->
+                                        <!--<li v-repeat="category in domain.categories"><a-->
+                                                <!--ui-sref="app.kpicategory({categoryId:category.id})">{{category.name}}</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
 
                             </div>
                         </div>
@@ -113,8 +113,8 @@
                             <div class="form-group col-md-6">
                                 <div class="col-sm-4">新密码:*</div>
                                 <div class="col-sm-8">
-                                    <input name="accountName" v-model="newInfo.password" class="form-control input-sm"
-                                           required>
+                                    <!--<input name="accountName" v-model="newInfo.password" class="form-control input-sm"-->
+                                           <!--required>-->
                                 </div>
                             </div>
                         </form>
@@ -167,9 +167,9 @@
         },
         created(){
             /*系统管理显示导航*/
-            if ($localStorage.currentUser.role == 'ADMINISTRATOR') {
-                this.systemManageNavStatus = true;
-            }
+//            if ($localStorage.currentUser.role == 'ADMINISTRATOR') {
+//                this.systemManageNavStatus = true;
+//            }
         },
         methods: {
             closePullInfo: function () {
