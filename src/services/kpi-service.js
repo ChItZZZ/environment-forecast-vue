@@ -1,11 +1,11 @@
-export default class kpiService {
+export default {
     persistentBlueMap() {
         kpiFactory.blueMap().get(null, function success(blueMap) {
             var blueMap = JSOG.parse(JSOG.stringify(blueMap.data));
             $localStorage.blueMap = blueMap;
             $rootScope.blueMap = blueMap;
         })
-    }
+    },
     getBlueMap(){
         if ($localStorage.blueMap == undefined) {
             return false;
